@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Filoxenia - IA Conversacional Meta-Humana para el Desarrollo del Comportamiento Social Humano. Universidad de Cundinamarca.">
+    <meta name="keywords" content="Filoxenia, IA, inteligencia artificial, meta-humano, comportamiento social, Universidad de Cundinamarca">
+    <meta name="author" content="Cristhian Aza, Duvan Lozano, Henry Ortega">
+    <title>Filoxenia | IA Conversacional Meta-Humana</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ========== LOADER ========== -->
+    <div id="loader" class="loader">
+        <div class="loader__content">
+            <div class="loader__brain">
+                <svg viewBox="0 0 100 100" width="80" height="80">
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#loaderGrad)" stroke-width="2" stroke-dasharray="283" stroke-dashoffset="283" class="loader__circle"/>
+                    <defs>
+                        <linearGradient id="loaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00d4ff"/>
+                            <stop offset="100%" stop-color="#7b2ff7"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <p class="loader__text">Cargando Filoxenia...</p>
+        </div>
+    </div>
+
+    <!-- ========== PARTICLES CANVAS ========== -->
+    <canvas id="particles"></canvas>
+
+    <!-- ========== THEME TOGGLE ========== -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+        <span class="theme-toggle__icon theme-toggle__icon--sun">☀️</span>
+        <span class="theme-toggle__icon theme-toggle__icon--moon">🌙</span>
+    </button>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav id="navbar" class="navbar">
+        <div class="navbar__container">
+            <a href="#inicio" class="navbar__logo">
+                <span class="navbar__logo-icon">◈</span>
+                <span class="navbar__logo-text">Filoxenia</span>
+            </a>
+            <button class="navbar__hamburger" id="hamburger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="navbar__menu" id="navMenu">
+                <li><a href="#inicio" class="navbar__link active">Inicio</a></li>
+                <li><a href="#sobre" class="navbar__link">Sobre el Proyecto</a></li>
+                <li><a href="#timeline" class="navbar__link">Hitos</a></li>
+                <li><a href="#requisitos" class="navbar__link">Requisitos</a></li>
+                <li><a href="#galeria" class="navbar__link">Galería</a></li>
+                <li><a href="#documentos" class="navbar__link">Documentos</a></li>
+                <li><a href="#equipo" class="navbar__link">Equipo</a></li>
+                <li><a href="#info" class="navbar__link">Información</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section id="inicio" class="hero">
+        <div class="hero__parallax-bg"></div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <div class="hero__wip" data-aos="fade-down">
+                <span class="hero__wip-dot"></span>
+                Proyecto en desarrollo activo
+            </div>
+            <div class="hero__badge" data-aos="fade-down" data-aos-delay="100">Universidad de Cundinamarca · Ingeniería de Sistemas · Chía</div>
+            <h1 class="hero__title" data-aos="fade-up">
+                <span class="hero__title-line">Filoxenia</span>
+                <span class="hero__title-sub">IA Conversacional Meta-Humana</span>
+            </h1>
+            <p class="hero__description" data-aos="fade-up" data-aos-delay="200">
+                Un prototipo meta-humano interactivo que comprende y responde al lenguaje verbal, visual y corporal
+                para mejorar las habilidades comunicativas y facilitar la integración social.
+            </p>
+            <div class="hero__cta" data-aos="fade-up" data-aos-delay="400">
+                <a href="#sobre" class="btn btn--primary">Explorar Proyecto</a>
+                <a href="#documentos" class="btn btn--outline">Ver Documentos</a>
+            </div>
+        </div>
+        <div class="hero__scroll-indicator">
+            <span>Scroll</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ========== SOBRE EL PROYECTO ========== -->
+    <section id="sobre" class="section sobre">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__tag">01 — Sobre el Proyecto</span>
+                <h2 class="section__title">¿Qué es Filoxenia?</h2>
+            </div>
+            <div class="sobre__grid">
+                <div class="sobre__main" data-aos="fade-right">
+                    <p class="sobre__text sobre__text--lead">
+                        <strong>Filoxenia</strong> es un prototipo de meta-humano interactivo basado en inteligencia artificial,
+                        diseñado para comprender y responder de manera natural al lenguaje verbal, visual y corporal.
+                    </p>
+                    <p class="sobre__text">
+                        El proyecto aborda el problema del aislamiento social progresivo y las dificultades para establecer
+                        nuevas relaciones interpersonales, un fenómeno agravado por factores psicológicos, culturales y
+                        tecnológicos que afectan la calidad de vida, la productividad y el bienestar emocional.
+                    </p>
+                    <p class="sobre__text">
+                        Nuestra solución integra inteligencia artificial con principios de la psicología social para crear
+                        un entorno seguro de práctica conversacional, sin generar dependencia tecnológica.
+                    </p>
+                    <div class="sobre__ods">
+                        <div class="sobre__ods-item">
+                            <div class="sobre__ods-icon">🏥</div>
+                            <div>
+                                <strong>ODS 3:</strong> Salud y Bienestar
+                                <p>Mejora de la salud mental y emocional</p>
+                            </div>
+                        </div>
+                        <div class="sobre__ods-item">
+                            <div class="sobre__ods-icon">⚙️</div>
+                            <div>
+                                <strong>ODS 9:</strong> Industria, Innovación e Infraestructura
+                                <p>Tecnologías inclusivas y sostenibles</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sobre__sidebar" data-aos="fade-left">
+                    <div class="sobre__card">
+                        <h3>Objetivo General</h3>
+                        <p>Desarrollar un sistema de meta-humano interactivo que pueda comprender y responder de manera
+                        natural al lenguaje verbal, visual y corporal, mejorando las habilidades comunicativas de los
+                        usuarios y facilitando su integración social.</p>
+                    </div>
+                    <div class="sobre__card">
+                        <h3>Objetivos Específicos</h3>
+                        <ul>
+                            <li>Analizar limitaciones sociales y psicológicas en la interacción interpersonal</li>
+                            <li>Diseñar un modelo de interacción natural basado en IA</li>
+                            <li>Implementar un prototipo con personalidad adaptable</li>
+                            <li>Evaluar el impacto mediante pruebas controladas</li>
+                            <li>Establecer lineamientos éticos y de seguridad</li>
+                        </ul>
+                    </div>
+                    <div class="sobre__card sobre__card--highlight">
+                        <h3>Metodología</h3>
+                        <p>Investigación aplicada con enfoque mixto, siguiendo la escala <strong>Technology Readiness Level (TRL)</strong>
+                        del SNCTI, con desarrollo iterativo desde TRL 1 hasta TRL 6-7.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROBLEMA ========== -->
+    <section class="section problema parallax-section">
+        <div class="problema__bg"></div>
+        <div class="container">
+            <div class="problema__content" data-aos="fade-up">
+                <span class="section__tag section__tag--light">Planteamiento del Problema</span>
+                <h2 class="problema__title">¿Por qué Filoxenia?</h2>
+                <p class="problema__text">
+                    La sociedad enfrenta crecientes dificultades para generar nuevas relaciones sociales.
+                    Factores como el rechazo previo, baja estimulación social, uso intensivo de tecnologías
+                    y rasgos de timidez reducen la capacidad comunicativa, afectan la autoestima y limitan
+                    la participación en proyectos colectivos.
+                </p>
+                <div class="problema__question">
+                    <span>Pregunta de investigación:</span>
+                    ¿Cómo se puede diseñar e implementar un prototipo de meta-humano interactivo basado en IA,
+                    capaz de comprender el lenguaje verbal, visual y corporal, que permita fortalecer las habilidades
+                    comunicativas y facilitar la integración social sin generar dependencia tecnológica?
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TIMELINE ========== -->
+    <section id="timeline" class="section timeline-section">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__tag">02 — Línea de Tiempo</span>
+                <h2 class="section__title">Hitos del Proyecto</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline__line"></div>
+
+                <div class="timeline__item" data-aos="fade-right">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content">
+                        <span class="timeline__date">Mes 1 — 2</span>
+                        <h3 class="timeline__title">Revisión Bibliográfica y Diagnóstico</h3>
+                        <span class="timeline__trl">TRL 1-2</span>
+                        <p>Revisión de literatura en psicología social, IA y diseño de interfaces.
+                        Entrevistas semiestructuradas con usuarios potenciales y levantamiento de necesidades.</p>
+                    </div>
+                </div>
+
+                <div class="timeline__item timeline__item--right" data-aos="fade-left">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content">
+                        <span class="timeline__date">Mes 2 — 3</span>
+                        <h3 class="timeline__title">Diseño Conceptual</h3>
+                        <span class="timeline__trl">TRL 3</span>
+                        <p>Definición de arquitectura general y detallada. Diseño de módulos de PLN,
+                        reconocimiento de gestos y emociones. Modelados UML del sistema.</p>
+                    </div>
+                </div>
+
+                <div class="timeline__item" data-aos="fade-right">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content">
+                        <span class="timeline__date">Mes 3 — 5</span>
+                        <h3 class="timeline__title">Desarrollo del Prototipo</h3>
+                        <span class="timeline__trl">TRL 4-5</span>
+                        <p>Implementación del prototipo funcional: módulos de IA para lenguaje natural,
+                        reconocimiento de emociones, síntesis de voz y respuestas adaptativas.</p>
+                    </div>
+                </div>
+
+                <div class="timeline__item timeline__item--right" data-aos="fade-left">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content">
+                        <span class="timeline__date">Mes 5 — 6</span>
+                        <h3 class="timeline__title">Pruebas Piloto y Validación</h3>
+                        <span class="timeline__trl">TRL 6-7</span>
+                        <p>Evaluación con grupos seleccionados de la Universidad de Cundinamarca.
+                        Recolección de datos cuantitativos y cualitativos sobre habilidades comunicativas.</p>
+                    </div>
+                </div>
+
+                <div class="timeline__item" data-aos="fade-right">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content">
+                        <span class="timeline__date">Mes 6</span>
+                        <h3 class="timeline__title">Análisis y Lineamientos Finales</h3>
+                        <span class="timeline__trl">Entrega Final</span>
+                        <p>Sistematización de resultados, optimización del prototipo y establecimiento
+                        de lineamientos éticos y recomendaciones técnicas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== REQUISITOS FUNCIONALES ========== -->
+    <section id="requisitos" class="section requisitos">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__tag">03 — Funcionalidades</span>
+                <h2 class="section__title">Requisitos del Sistema</h2>
+                <p class="section__subtitle">30 requisitos funcionales que definen las capacidades de Filoxenia</p>
+            </div>
+
+            <!-- Filtros -->
+            <div class="requisitos__filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="interaccion">Interacción</button>
+                <button class="filter-btn" data-filter="analisis">Análisis</button>
+                <button class="filter-btn" data-filter="seguridad">Seguridad</button>
+                <button class="filter-btn" data-filter="evaluacion">Evaluación</button>
+                <button class="filter-btn" data-filter="investigacion">Investigación</button>
+            </div>
+
+            <div class="requisitos__grid">
+                <!-- Interacción -->
+                <div class="req-card" data-category="seguridad" data-aos="fade-up">
+                    <span class="req-card__id">RF001</span>
+                    <h4 class="req-card__title">Consentimiento Ético Digital</h4>
+                    <p>Formularios de consentimiento informado detallados con confirmación explícita para cada tipo de dato recolectado.</p>
+                </div>
+                <div class="req-card" data-category="interaccion" data-aos="fade-up">
+                    <span class="req-card__id">RF002</span>
+                    <h4 class="req-card__title">Conversación Multimodal Integrada</h4>
+                    <p>Interacción mediante voz, texto y video con sincronización perfecta entre modalidades.</p>
+                </div>
+                <div class="req-card" data-category="analisis" data-aos="fade-up">
+                    <span class="req-card__id">RF003</span>
+                    <h4 class="req-card__title">Analizador Emocional Vocal</h4>
+                    <p>Detección de patrones emocionales en la voz: alegría, tristeza, ansiedad, confianza y métricas objetivas.</p>
+                </div>
+                <div class="req-card" data-category="analisis" data-aos="fade-up">
+                    <span class="req-card__id">RF004</span>
+                    <h4 class="req-card__title">Scanner de Lenguaje Corporal</h4>
+                    <p>Análisis en tiempo real de expresiones faciales, contacto visual, postura y gestos corporales.</p>
+                </div>
+                <div class="req-card" data-category="evaluacion" data-aos="fade-up">
+                    <span class="req-card__id">RF005</span>
+                    <h4 class="req-card__title">Feedback Inmediato Inteligente</h4>
+                    <p>Retroalimentación específica después de cada turno conversacional con ejemplos concretos.</p>
+                </div>
+                <div class="req-card" data-category="interaccion" data-aos="fade-up">
+                    <span class="req-card__id">RF006</span>
+                    <h4 class="req-card__title">Adaptador Dinámico de Dificultad</h4>
+                    <p>Ajuste progresivo de complejidad basado en el desempeño y señales de frustración del usuario.</p>
+                </div>
+                <div class="req-card" data-category="analisis" data-aos="fade-up">
+                    <span class="req-card__id">RF007</span>
+                    <h4 class="req-card__title">Evaluador de Coherencia Discursiva</h4>
+                    <p>Análisis de estructura discursiva, uso de muletillas, cohesión y organización de ideas.</p>
+                </div>
+                <div class="req-card" data-category="interaccion" data-aos="fade-up">
+                    <span class="req-card__id">RF008</span>
+                    <h4 class="req-card__title">Personalizador de Personalidad IA</h4>
+                    <p>Ajuste de rasgos de personalidad del agente: empático vs directo, formal vs casual.</p>
+                </div>
+                <div class="req-card" data-category="interaccion" data-aos="fade-up">
+                    <span class="req-card__id">RF009</span>
+                    <h4 class="req-card__title">Generador Contextual de Respuestas</h4>
+                    <p>Motor de generación de lenguaje natural con coherencia temática y memoria de contexto.</p>
+                </div>
+                <div class="req-card" data-category="interaccion" data-aos="fade-up">
+                    <span class="req-card__id">RF010</span>
+                    <h4 class="req-card__title">Selector de Escenarios Sociales</h4>
+                    <p>Biblioteca de situaciones: entrevistas de trabajo, presentaciones, conversaciones informales.</p>
+                </div>
+                <div class="req-card" data-category="evaluacion" data-aos="fade-up">
+                    <span class="req-card__id">RF011</span>
+                    <h4 class="req-card__title">Dashboard de Progreso Visual</h4>
+                    <p>Gráficos interactivos, estadísticas, tendencias y comparativas temporales del usuario.</p>
+                </div>
+                <div class="req-card" data-category="interaccion" data-aos="fade-up">
+                    <span class="req-card__id">RF012</span>
+                    <h4 class="req-card__title">Onboarding Guiado</h4>
+                    <p>Guía paso a paso que introduce al usuario en la plataforma y establece expectativas.</p>
+                </div>
+                <div class="req-card" data-category="seguridad" data-aos="fade-up">
+                    <span class="req-card__id">RF013</span>
+                    <h4 class="req-card__title">Moderador de Dependencia</h4>
+                    <p>Detección de patrones de dependencia emocional y redirección hacia interacciones humanas.</p>
+                </div>
+                <div class="req-card" data-category="seguridad" data-aos="fade-up">
+                    <span class="req-card__id">RF014</span>
+                    <h4 class="req-card__title">Almacenamiento Seguro de Sesiones</h4>
+                    <p>Almacenamiento cifrado de interacciones respetando políticas de retención y privacidad.</p>
+                </div>
+                <div class="req-card" data-category="interaccion" data-aos="fade-up">
+                    <span class="req-card__id">RF015</span>
+                    <h4 class="req-card__title">Controlador de Ritmo Conversacional</h4>
+                    <p>Controles para pausar, solicitar repeticiones y tomar descansos durante la interacción.</p>
+                </div>
+                <div class="req-card" data-category="evaluacion" data-aos="fade-up">
+                    <span class="req-card__id">RF016</span>
+                    <h4 class="req-card__title">Exportador de Reportes Profesionales</h4>
+                    <p>Generación de reportes en PDF y CSV para compartir con terapeutas o investigadores.</p>
+                </div>
+                <div class="req-card" data-category="evaluacion" data-aos="fade-up">
+                    <span class="req-card__id">RF017</span>
+                    <h4 class="req-card__title">Evaluador de Competencias Sociales</h4>
+                    <p>Evaluación estandarizada con instrumentos validados para medir cambios objetivos.</p>
+                </div>
+                <div class="req-card" data-category="investigacion" data-aos="fade-up">
+                    <span class="req-card__id">RF018</span>
+                    <h4 class="req-card__title">Reportero de Incidencias</h4>
+                    <p>Canal directo para reportar problemas técnicos, sesgos o contenido inapropiado.</p>
+                </div>
+                <div class="req-card" data-category="interaccion" data-aos="fade-up">
+                    <span class="req-card__id">RF019</span>
+                    <h4 class="req-card__title">Modo Práctica Asistida</h4>
+                    <p>Modalidad estructurada con instrucciones, sugerencias de respuesta y andamiaje.</p>
+                </div>
+                <div class="req-card" data-category="interaccion" data-aos="fade-up">
+                    <span class="req-card__id">RF020</span>
+                    <h4 class="req-card__title">Biblioteca de Scripts Sociales</h4>
+                    <p>Diálogos preestablecidos con respuestas esperadas y objetivos de aprendizaje claros.</p>
+                </div>
+                <div class="req-card" data-category="evaluacion" data-aos="fade-up">
+                    <span class="req-card__id">RF021</span>
+                    <h4 class="req-card__title">Historial de Recomendaciones</h4>
+                    <p>Repositorio organizado de todas las recomendaciones para revisar la evolución.</p>
+                </div>
+                <div class="req-card" data-category="seguridad" data-aos="fade-up">
+                    <span class="req-card__id">RF022</span>
+                    <h4 class="req-card__title">Protocolo de Cierre Seguro</h4>
+                    <p>Recursos de apoyo al finalizar cada sesión y validación del estado emocional.</p>
+                </div>
+                <div class="req-card" data-category="analisis" data-aos="fade-up">
+                    <span class="req-card__id">RF023</span>
+                    <h4 class="req-card__title">Transcriptor Inteligente</h4>
+                    <p>Transcripción automática que identifica turnos de conversación y patrones de diálogo.</p>
+                </div>
+                <div class="req-card" data-category="interaccion" data-aos="fade-up">
+                    <span class="req-card__id">RF024</span>
+                    <h4 class="req-card__title">Perfilador de Objetivos</h4>
+                    <p>Configuración individualizada de metas de aprendizaje y áreas focales.</p>
+                </div>
+                <div class="req-card" data-category="investigacion" data-aos="fade-up">
+                    <span class="req-card__id">RF025</span>
+                    <h4 class="req-card__title">Monitor de Sesiones en Vivo</h4>
+                    <p>Monitoreo para supervisores con capacidad de intervención en situaciones de crisis.</p>
+                </div>
+                <div class="req-card" data-category="interaccion" data-aos="fade-up">
+                    <span class="req-card__id">RF026</span>
+                    <h4 class="req-card__title">Generador de Scripts Personalizados</h4>
+                    <p>Creación de escenarios de práctica basados en objetivos y contexto del usuario.</p>
+                </div>
+                <div class="req-card" data-category="investigacion" data-aos="fade-up">
+                    <span class="req-card__id">RF027</span>
+                    <h4 class="req-card__title">Anotador para Investigadores</h4>
+                    <p>Herramientas de etiquetado y categorización para análisis cualitativo.</p>
+                </div>
+                <div class="req-card" data-category="investigacion" data-aos="fade-up">
+                    <span class="req-card__id">RF028</span>
+                    <h4 class="req-card__title">Conector de Datos para Análisis</h4>
+                    <p>Interfaz para exportar datos anonimizados a herramientas estadísticas externas.</p>
+                </div>
+                <div class="req-card" data-category="investigacion" data-aos="fade-up">
+                    <span class="req-card__id">RF029</span>
+                    <h4 class="req-card__title">Panel de Gestión de Pruebas</h4>
+                    <p>Interfaz administrativa para gestionar usuarios, sesiones y actividades de investigación.</p>
+                </div>
+                <div class="req-card" data-category="seguridad" data-aos="fade-up">
+                    <span class="req-card__id">RF030</span>
+                    <h4 class="req-card__title">Autenticador Seguro</h4>
+                    <p>Autenticación robusta con verificación de identidad y protección contra accesos no autorizados.</p>
+                </div>
+            </div>
+            <p class="requisitos__note" data-aos="fade-up">
+                Además, el sistema contempla requisitos no funcionales de <strong>rendimiento en tiempo real</strong>
+                (&lt;2s de respuesta en el 95% de interacciones) y <strong>confiabilidad</strong> (99% de disponibilidad).
+            </p>
+        </div>
+    </section>
+
+    <!-- ========== GALERÍA ========== -->
+    <section id="galeria" class="section galeria">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__tag">04 — Evidencias</span>
+                <h2 class="section__title">Galería del Proyecto</h2>
+                <p class="section__subtitle">Documentación visual del proceso de investigación y desarrollo</p>
+            </div>
+
+            <div class="galeria__filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="investigacion">Investigación</button>
+                <button class="filter-btn" data-filter="desarrollo">Desarrollo</button>
+                <button class="filter-btn" data-filter="presentacion">Presentaciones</button>
+            </div>
+
+            <div class="galeria__grid" id="galeriaGrid">
+                <div class="galeria__item" data-category="investigacion" data-aos="zoom-in"
+                     data-img="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=900&h=600&fit=crop">
+                    <div class="galeria__placeholder">
+                        <div class="galeria__placeholder-icon">📋</div>
+                        <span>Revisión Bibliográfica</span>
+                        <p>Análisis de literatura sobre IA social y psicología</p>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="desarrollo" data-aos="zoom-in"
+                     data-img="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&h=600&fit=crop">
+                    <div class="galeria__placeholder">
+                        <div class="galeria__placeholder-icon">🧠</div>
+                        <span>Arquitectura del Sistema</span>
+                        <p>Diseño de módulos de PLN y reconocimiento emocional</p>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="desarrollo" data-aos="zoom-in"
+                     data-img="https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=900&h=600&fit=crop">
+                    <div class="galeria__placeholder">
+                        <div class="galeria__placeholder-icon">💬</div>
+                        <span>Motor Conversacional</span>
+                        <p>Implementación del generador contextual de respuestas</p>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="presentacion" data-aos="zoom-in"
+                     data-img="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=900&h=600&fit=crop">
+                    <div class="galeria__placeholder">
+                        <div class="galeria__placeholder-icon">🎓</div>
+                        <span>Presentación Académica</span>
+                        <p>Sustentación del proyecto en la Universidad de Cundinamarca</p>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="investigacion" data-aos="zoom-in"
+                     data-img="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=600&fit=crop">
+                    <div class="galeria__placeholder">
+                        <div class="galeria__placeholder-icon">📊</div>
+                        <span>Análisis de Datos</span>
+                        <p>Resultados de encuestas y diagnóstico inicial</p>
+                    </div>
+                </div>
+                <div class="galeria__item" data-category="desarrollo" data-aos="zoom-in"
+                     data-img="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=900&h=600&fit=crop">
+                    <div class="galeria__placeholder">
+                        <div class="galeria__placeholder-icon">🤖</div>
+                        <span>Prototipo Meta-Humano</span>
+                        <p>Interfaz visual del agente conversacional Filoxenia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LIGHTBOX ========== -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox__close" aria-label="Cerrar">&times;</button>
+        <button class="lightbox__prev" aria-label="Anterior">&#10094;</button>
+        <button class="lightbox__next" aria-label="Siguiente">&#10095;</button>
+        <div class="lightbox__content">
+            <img id="lightboxImg" src="" alt="">
+            <div class="lightbox__info">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== DOCUMENTOS ========== -->
+    <section id="documentos" class="section documentos">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__tag">05 — Documentación</span>
+                <h2 class="section__title">Documentos del Proyecto</h2>
+                <p class="section__subtitle">Accede y descarga los documentos clave de la investigación</p>
+            </div>
+
+            <div class="documentos__grid">
+                <div class="doc-card" data-aos="fade-up">
+                    <div class="doc-card__icon">📄</div>
+                    <div class="doc-card__info">
+                        <h4>Anteproyecto de Investigación</h4>
+                        <p>Plantilla completa del anteproyecto CAI CTeI con el marco referencial, metodología y cronograma.</p>
+                        <span class="doc-card__meta">DOCX · Documentación Principal</span>
+                    </div>
+                    <div class="doc-card__actions">
+                        <button class="btn btn--preview" data-file="Documentacion principal/PLANTILLA ANTEPROYECTO DE INVESTIGACIÓN CAI CTeI - NIVELATORIO (3).docx" data-title="Anteproyecto de Investigación">Vista previa</button>
+                        <a href="Documentacion principal/PLANTILLA ANTEPROYECTO DE INVESTIGACIÓN CAI CTeI - NIVELATORIO (3).docx" class="btn btn--small" download>Descargar</a>
+                    </div>
+                </div>
+
+                <div class="doc-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="doc-card__icon">📊</div>
+                    <div class="doc-card__info">
+                        <h4>Presentación del Proyecto</h4>
+                        <p>Presentación de Programación I con el planteamiento del problema, objetivos y metodología.</p>
+                        <span class="doc-card__meta">PPTX · Documentación Principal</span>
+                    </div>
+                    <div class="doc-card__actions">
+                        <button class="btn btn--preview" data-file="Documentacion principal/Presentacion de progrmacion I.pptx" data-title="Presentación del Proyecto">Vista previa</button>
+                        <a href="Documentacion principal/Presentacion de progrmacion I.pptx" class="btn btn--small" download>Descargar</a>
+                    </div>
+                </div>
+
+                <div class="doc-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="doc-card__icon">🤖</div>
+                    <div class="doc-card__info">
+                        <h4>Presentación IA Futurista</h4>
+                        <p>Presentación sobre inteligencia artificial y su aplicación en el contexto del proyecto.</p>
+                        <span class="doc-card__meta">PDF · Documentación Principal</span>
+                    </div>
+                    <div class="doc-card__actions">
+                        <button class="btn btn--preview" data-file="Documentacion principal/Presentación Inteligencia artificial Futurista _compressed (1).pdf" data-title="Presentación IA Futurista">Vista previa</button>
+                        <a href="Documentacion principal/Presentación Inteligencia artificial Futurista _compressed (1).pdf" class="btn btn--small" download>Descargar</a>
+                    </div>
+                </div>
+
+                <div class="doc-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="doc-card__icon">🧠</div>
+                    <div class="doc-card__info">
+                        <h4>Pensamientos y Actividad Cognitiva</h4>
+                        <p>Documento sobre actividad cognitiva aplicada al análisis del comportamiento social.</p>
+                        <span class="doc-card__meta">PDF · Documentación Principal</span>
+                    </div>
+                    <div class="doc-card__actions">
+                        <button class="btn btn--preview" data-file="Documentacion principal/R1-A1-S3 Pensamientos, Actividad Cognitiva (2).pdf" data-title="Pensamientos y Actividad Cognitiva">Vista previa</button>
+                        <a href="Documentacion principal/R1-A1-S3 Pensamientos, Actividad Cognitiva (2).pdf" class="btn btn--small" download>Descargar</a>
+                    </div>
+                </div>
+
+                <div class="doc-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="doc-card__icon">📋</div>
+                    <div class="doc-card__info">
+                        <h4>Requisitos Funcionales y No Funcionales</h4>
+                        <p>Especificación completa de los 30 requisitos funcionales y requisitos no funcionales del sistema.</p>
+                        <span class="doc-card__meta">XLSX · Documentación Principal</span>
+                    </div>
+                    <div class="doc-card__actions">
+                        <button class="btn btn--preview" data-file="Documentacion principal/REQUISITOS FUNCIONALES Y NO FUNCIONALES.xlsx" data-title="Requisitos Funcionales y No Funcionales">Vista previa</button>
+                        <a href="Documentacion principal/REQUISITOS FUNCIONALES Y NO FUNCIONALES.xlsx" class="btn btn--small" download>Descargar</a>
+                    </div>
+                </div>
+
+                <div class="doc-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="doc-card__icon">📝</div>
+                    <div class="doc-card__info">
+                        <h4>RAE - Sistematización de la Información</h4>
+                        <p>Resumen Analítico Especializado del proceso de sistematización de información del proyecto.</p>
+                        <span class="doc-card__meta">PDF · Documentación Principal</span>
+                    </div>
+                    <div class="doc-card__actions">
+                        <button class="btn btn--preview" data-file="Documentacion principal/Resumen Analítico Especializado RAE - Sistematización de la Información..pdf" data-title="RAE - Sistematización de la Información">Vista previa</button>
+                        <a href="Documentacion principal/Resumen Analítico Especializado RAE - Sistematización de la Información..pdf" class="btn btn--small" download>Descargar</a>
+                    </div>
+                </div>
+
+                <div class="doc-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="doc-card__icon">🎓</div>
+                    <div class="doc-card__info">
+                        <h4>Evento X-PIN 2024-2</h4>
+                        <p>Documento del evento académico de la Facultad de Ingeniería y Computación.</p>
+                        <span class="doc-card__meta">PDF · Documentación Principal</span>
+                    </div>
+                    <div class="doc-card__actions">
+                        <button class="btn btn--preview" data-file="Documentacion principal/UNIVERSIDAD DE CUNDINAMARCA Facultad de Ingeniería y Computación ext. Chía Colocar el nombre del evento X-PIN 2024-2 de Semestre - EIS.pdf" data-title="Evento X-PIN 2024-2">Vista previa</button>
+                        <a href="Documentacion principal/UNIVERSIDAD DE CUNDINAMARCA Facultad de Ingeniería y Computación ext. Chía Colocar el nombre del evento X-PIN 2024-2 de Semestre - EIS.pdf" class="btn btn--small" download>Descargar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Referencias Bibliográficas -->
+            <div class="documentos__references" data-aos="fade-up">
+                <h3>Referencias Bibliográficas</h3>
+                <p class="documentos__ref-desc">Artículos y documentos de investigación que fundamentan el proyecto</p>
+                <div class="documentos__ref-grid">
+                    <div class="ref-card">
+                        <span class="ref-card__type">PDF</span>
+                        <h5>La IA y la Psicología</h5>
+                        <div class="ref-card__actions">
+                            <button class="ref-card__link ref-card__link--preview" data-file="Referencias/3. La IA y la psicología.pdf" data-title="La IA y la Psicología">Vista previa</button>
+                            <a href="Referencias/3. La IA y la psicología.pdf" download class="ref-card__link">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="ref-card">
+                        <span class="ref-card__type">PDF</span>
+                        <h5>Guías para la Interacción Humano-IA</h5>
+                        <div class="ref-card__actions">
+                            <button class="ref-card__link ref-card__link--preview" data-file="Referencias/Guías para la Interacción Humano-IA.pdf" data-title="Guías para la Interacción Humano-IA">Vista previa</button>
+                            <a href="Referencias/Guías para la Interacción Humano-IA.pdf" download class="ref-card__link">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="ref-card">
+                        <span class="ref-card__type">PDF</span>
+                        <h5>Predicción de la Depresión a través de Redes Sociales</h5>
+                        <div class="ref-card__actions">
+                            <button class="ref-card__link ref-card__link--preview" data-file="Referencias/Predicción de la Depresión a través de Redes Sociales.pdf" data-title="Predicción de la Depresión a través de Redes Sociales">Vista previa</button>
+                            <a href="Referencias/Predicción de la Depresión a través de Redes Sociales.pdf" download class="ref-card__link">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="ref-card">
+                        <span class="ref-card__type">PDF</span>
+                        <h5>Asistente Digital para Pilotos basado en IA</h5>
+                        <div class="ref-card__actions">
+                            <button class="ref-card__link ref-card__link--preview" data-file="Referencias/Asistente digital para pilotos basado en IA con comandos de voz (ASR) y recuperación de información generativa (RAG).pdf" data-title="Asistente Digital para Pilotos basado en IA">Vista previa</button>
+                            <a href="Referencias/Asistente digital para pilotos basado en IA con comandos de voz (ASR) y recuperación de información generativa (RAG).pdf" download class="ref-card__link">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="ref-card">
+                        <span class="ref-card__type">PDF</span>
+                        <h5>Diseño de Asistente Virtual para Consultorios Jurídicos</h5>
+                        <div class="ref-card__actions">
+                            <button class="ref-card__link ref-card__link--preview" data-file="Referencias/DISEÑO DE ASISTENTE VIRTUAL PARA CONSULTORIOS JURÍDICOS..pdf" data-title="Diseño de Asistente Virtual para Consultorios Jurídicos">Vista previa</button>
+                            <a href="Referencias/DISEÑO DE ASISTENTE VIRTUAL PARA CONSULTORIOS JURÍDICOS..pdf" download class="ref-card__link">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="ref-card">
+                        <span class="ref-card__type">PDF</span>
+                        <h5>Investigación Psicológica con IA</h5>
+                        <div class="ref-card__actions">
+                            <button class="ref-card__link ref-card__link--preview" data-file="Referencias/González, Federico (2025). Cómo hacer investigación psicológica con inteligencia artificial.pdf" data-title="Investigación Psicológica con IA">Vista previa</button>
+                            <a href="Referencias/González, Federico (2025). Cómo hacer investigación psicológica con inteligencia artificial.pdf" download class="ref-card__link">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="ref-card">
+                        <span class="ref-card__type">PDF</span>
+                        <h5>Análisis de IA en Comunicación Social</h5>
+                        <div class="ref-card__actions">
+                            <button class="ref-card__link ref-card__link--preview" data-file="Referencias/Análisis descriptivo sobre la aplicación de herramientas de Inteligencia Artificial (IA) para la carrera de Comunicación Social de la Universidad Cooperativa de Colombia para el año.pdf" data-title="Análisis de IA en Comunicación Social">Vista previa</button>
+                            <a href="Referencias/Análisis descriptivo sobre la aplicación de herramientas de Inteligencia Artificial (IA) para la carrera de Comunicación Social de la Universidad Cooperativa de Colombia para el año.pdf" download class="ref-card__link">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="ref-card">
+                        <span class="ref-card__type">PDF</span>
+                        <h5>Credibilidad de Noticias: Humanos vs IA</h5>
+                        <div class="ref-card__actions">
+                            <button class="ref-card__link ref-card__link--preview" data-file="Referencias/De lo real a lo ficticio_ evaluación de la credibilidad de noticias difundidas por humanos y por avatares creados con inteligencia artificial.pdf" data-title="Credibilidad de Noticias: Humanos vs IA">Vista previa</button>
+                            <a href="Referencias/De lo real a lo ficticio_ evaluación de la credibilidad de noticias difundidas por humanos y por avatares creados con inteligencia artificial.pdf" download class="ref-card__link">Descargar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== IMPACTO ========== -->
+    <section class="section impacto parallax-section">
+        <div class="impacto__bg"></div>
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__tag section__tag--light">Impacto Esperado</span>
+                <h2 class="section__title section__title--light">Transformando la Comunicación Social</h2>
+            </div>
+            <div class="impacto__grid">
+                <div class="impacto__card" data-aos="fade-up">
+                    <div class="impacto__icon">💻</div>
+                    <h3>Tecnológico</h3>
+                    <p>Desarrollo de un meta-humano interactivo que integra PLN, reconocimiento de emociones y personalidad adaptable,
+                    representando un avance en la IA social en Colombia.</p>
+                </div>
+                <div class="impacto__card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="impacto__icon">🤝</div>
+                    <h3>Social</h3>
+                    <p>Reducción del aislamiento y fomento de la inclusión en personas con dificultades comunicativas,
+                    mejorando su bienestar emocional y participación comunitaria.</p>
+                </div>
+                <div class="impacto__card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="impacto__icon">🎓</div>
+                    <h3>Académico</h3>
+                    <p>Apertura de espacios de investigación en IA social, ciencias del comportamiento y diseño de interfaces,
+                    posicionando a Ingeniería de Sistemas como referente.</p>
+                </div>
+                <div class="impacto__card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="impacto__icon">🧠</div>
+                    <h3>Salud Mental</h3>
+                    <p>Fortalecimiento del bienestar emocional mediante una herramienta de apoyo que complementa,
+                    sin sustituir, las relaciones humanas reales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EQUIPO ========== -->
+    <section id="equipo" class="section equipo">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__tag">06 — Equipo</span>
+                <h2 class="section__title">Nuestro Equipo</h2>
+                <p class="section__subtitle">Los investigadores y desarrolladores detrás de Filoxenia</p>
+            </div>
+            <div class="equipo__grid">
+                <div class="equipo__card" data-aos="fade-up">
+                    <div class="equipo__avatar">
+                        <img src="Equipo/Crisitian.jpg" alt="Cristhian Stiven Aza Diaz" class="equipo__photo">
+                    </div>
+                    <h3 class="equipo__name">Cristhian Stiven Aza Diaz</h3>
+                    <p class="equipo__role">Investigador / Desarrollador</p>
+                    <p class="equipo__program">Ingeniería en Sistemas y Computación</p>
+                    <p class="equipo__university">Universidad de Cundinamarca — Chía</p>
+                </div>
+                <div class="equipo__card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="equipo__avatar">
+                        <img src="Equipo/Duvan.jpg" alt="Duvan Lozano Romero" class="equipo__photo">
+                    </div>
+                    <h3 class="equipo__name">Duvan Lozano Romero</h3>
+                    <p class="equipo__role">Investigador / Desarrollador</p>
+                    <p class="equipo__program">Ingeniería en Sistemas y Computación</p>
+                    <p class="equipo__university">Universidad de Cundinamarca — Chía</p>
+                </div>
+                <div class="equipo__card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="equipo__avatar">
+                        <img src="Equipo/Henry.jpeg" alt="Henry Alejandro Ortega" class="equipo__photo">
+                    </div>
+                    <h3 class="equipo__name">Henry Alejandro Ortega</h3>
+                    <p class="equipo__role">Investigador / Desarrollador</p>
+                    <p class="equipo__program">Ingeniería en Sistemas y Computación</p>
+                    <p class="equipo__university">Universidad de Cundinamarca — Chía</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== INFORMACIÓN INSTITUCIONAL ========== -->
+    <section id="info" class="section contacto">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__tag">07 — Información</span>
+                <h2 class="section__title">Información Institucional</h2>
+                <p class="section__subtitle">Datos académicos del proyecto de investigación</p>
+            </div>
+            <div class="info__grid">
+                <div class="info__card" data-aos="fade-up">
+                    <span class="info__card-icon">🏫</span>
+                    <h4>Universidad</h4>
+                    <p>Universidad de Cundinamarca<br>Extensión Chía, Cundinamarca</p>
+                </div>
+                <div class="info__card" data-aos="fade-up" data-aos-delay="100">
+                    <span class="info__card-icon">📚</span>
+                    <h4>Programa</h4>
+                    <p>Ingeniería en Sistemas y Computación<br>Facultad de Ingeniería y Computación</p>
+                </div>
+                <div class="info__card" data-aos="fade-up" data-aos-delay="200">
+                    <span class="info__card-icon">🔬</span>
+                    <h4>Línea de Investigación</h4>
+                    <p>Aprendizaje, conocimiento, tecnologías, comunicación y digitalización</p>
+                </div>
+                <div class="info__card" data-aos="fade-up" data-aos-delay="300">
+                    <span class="info__card-icon">📁</span>
+                    <h4>Portafolio en Drive</h4>
+                    <p><a href="https://drive.google.com/drive/folders/1Z0Ip9992Sjj5lr9B-KvuDni5-EJA18q_?usp=sharing"
+                       target="_blank" rel="noopener">Acceder al Drive del proyecto</a></p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== DOCUMENT PREVIEW MODAL ========== -->
+    <div id="docPreview" class="doc-preview">
+        <div class="doc-preview__header">
+            <h3 id="docPreviewTitle" class="doc-preview__title"></h3>
+            <div class="doc-preview__header-actions">
+                <a id="docPreviewDownload" href="" download class="btn btn--small">Descargar</a>
+                <button id="docPreviewClose" class="doc-preview__close" aria-label="Cerrar">&times;</button>
+            </div>
+        </div>
+        <div class="doc-preview__body">
+            <div id="docPreviewLoader" class="doc-preview__loader">
+                <div class="loader__brain">
+                    <svg viewBox="0 0 100 100" width="50" height="50">
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="url(#previewGrad)" stroke-width="2" stroke-dasharray="283" stroke-dashoffset="283" class="loader__circle"/>
+                        <defs><linearGradient id="previewGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00d4ff"/><stop offset="100%" stop-color="#7b2ff7"/></linearGradient></defs>
+                    </svg>
+                </div>
+                <p>Cargando documento...</p>
+            </div>
+            <iframe id="docPreviewFrame" class="doc-preview__frame" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <span class="navbar__logo-icon">◈</span>
+                    <span class="footer__brand-name">Filoxenia</span>
+                    <p>IA Conversacional Meta-Humana para el Desarrollo y Análisis del Comportamiento Social Humano</p>
+                </div>
+                <div class="footer__links">
+                    <h4>Navegación</h4>
+                    <a href="#inicio">Inicio</a>
+                    <a href="#sobre">Sobre el Proyecto</a>
+                    <a href="#timeline">Hitos</a>
+                    <a href="#equipo">Equipo</a>
+                </div>
+                <div class="footer__links">
+                    <h4>Recursos</h4>
+                    <a href="#requisitos">Requisitos</a>
+                    <a href="#galeria">Galería</a>
+                    <a href="#documentos">Documentos</a>
+                    <a href="#info">Información</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__wip"><span class="hero__wip-dot"></span> Proyecto en desarrollo activo — Contenido sujeto a cambios</p>
+                <p>&copy; 2026 Filoxenia — Universidad de Cundinamarca, Extensión Chía</p>
+                <p>Campo de Aprendizaje Institucional: Ciencia, Tecnología e Innovación</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== SCROLL TO TOP ========== -->
+    <button id="scrollTop" class="scroll-top" aria-label="Volver arriba">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
