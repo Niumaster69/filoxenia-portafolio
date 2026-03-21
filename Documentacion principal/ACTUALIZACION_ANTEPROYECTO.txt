@@ -1,0 +1,257 @@
+============================================================
+ACTUALIZACIÓN DEL ANTEPROYECTO DE INVESTIGACIÓN
+"Filoxenia" - IA Conversacional Meta-Humana
+============================================================
+
+INSTRUCCIONES: Copie y pegue cada sección actualizada en el archivo
+Word del anteproyecto, reemplazando la sección correspondiente.
+
+============================================================
+SECCIÓN 1: PLANTEAMIENTO DEL PROBLEMA (REEMPLAZAR COMPLETA)
+============================================================
+
+Planteamiento del Problema
+
+Hoy en día, la sociedad enfrenta crecientes dificultades para generar nuevas relaciones sociales. Este problema no se limita a diagnósticos clínicos de salud mental, sino que también afecta a personas que han experimentado aislamiento progresivo por factores como rechazo previo, baja estimulación social en el entorno familiar, uso intensivo de tecnologías y rasgos de personalidad relacionados con la timidez (American Psychiatric Association, 2013).
+
+Estas condiciones reducen la capacidad comunicativa, afectan la autoestima y el bienestar emocional, disminuyen la productividad académica y laboral, y limitan la participación en proyectos colectivos. A nivel global, el aislamiento social se reconoce como un factor de riesgo para la ansiedad, la depresión y el deterioro cognitivo, además de impactar negativamente en la calidad de vida (Holt-Lunstad, 2018). Estudios como el de De Choudhury et al. (2013) han demostrado que las redes sociales contienen señales útiles para caracterizar el inicio de la depresión en los individuos, evidenciando que los usuarios con menor actividad social y mayor expresión de emociones negativas presentan mayor vulnerabilidad a trastornos emocionales.
+
+El fenómeno se observa en distintos contextos. En jóvenes universitarios, la presión académica y el uso de tecnologías digitales pueden generar interacciones superficiales que fomentan la soledad. En Colombia, un estudio de Herazo Hoyos et al. (2024) reveló que más del 90% de los estudiantes de educación superior se ven a futuro utilizando asistentes virtuales como apoyo para sus tareas cotidianas, lo que evidencia una creciente aceptación de las herramientas de IA pero también una posible dependencia de estas. En el ámbito laboral, el teletrabajo prolongado reduce las oportunidades de socialización, afectando la dinámica de equipo y el bienestar emocional. En instituciones académicas como la Universidad de Cundinamarca, estas dificultades se convierten en un obstáculo para el aprendizaje colaborativo y el desarrollo de competencias socioemocionales.
+
+La revisión sistemática de literatura realizada en este proyecto, que abarcó 30 artículos académicos publicados entre 2013 y 2025, permite identificar tres ejes problemáticos fundamentales. En primer lugar, la evidencia muestra que los avatares y metahumanos con inteligencia artificial pueden mejorar significativamente la presencia social, el sentido de pertenencia y la conexión emocional entre los usuarios (Nam et al., 2025). En segundo lugar, el antropomorfismo y la apariencia visual de los agentes de IA influyen directamente en la forma en que los usuarios aplican normas sociales durante la interacción, generando comportamientos más respetuosos y sostenidos cuando los avatares presentan apariencia humana (Lazebnik et al., 2025). En tercer lugar, múltiples estudios confirman que las herramientas de IA mejoran la práctica conversacional, proporcionan retroalimentación inmediata y permiten aprendizaje personalizado de habilidades comunicativas (Chocobar Reyes et al., 2025; González Olaya, 2023; Infante-Miranda et al., 2024).
+
+Sin embargo, la literatura también señala limitaciones importantes. Campana Ruiz et al. (2024) advierten que la IA carece de experiencia subjetiva y empatía genuina, por lo que debe entenderse como complemento y no como sustituto de la interacción humana. Asimismo, Osorio-Andrade et al. (2024) demostraron que los avatares excesivamente realistas pueden generar rechazo (efecto "valle inquietante"), disminuyendo la credibilidad percibida.
+
+Aunque existen proyectos previos como MetaHuman Creator de Epic Games, Replika AI, Project Xiaoice de Microsoft y Sophia de Hanson Robotics, ninguno integra de manera completa la comprensión del lenguaje verbal, visual y corporal orientada al fortalecimiento de habilidades sociales sin fomentar dependencia emocional (Turkle, 2011; Breazeal, 2003). El proyecto Metahuman de Collins et al. (2024) se acerca a esta visión al proponer una experiencia de aprendizaje basada en simulación donde los estudiantes interactúan con humanos virtuales en 3D impulsados por IA, pero se limita a escenarios educativos específicos y no aborda la integración social de manera integral.
+
+Ante esta situación, surge la siguiente pregunta de investigación:
+
+¿Cómo se puede diseñar e implementar un prototipo de meta-humano interactivo basado en inteligencia artificial, capaz de comprender el lenguaje verbal, visual y corporal, que permita fortalecer las habilidades comunicativas de los usuarios y facilitar su integración social sin generar dependencia tecnológica?
+
+
+============================================================
+SECCIÓN 2: MARCO REFERENCIAL (REEMPLAZAR COMPLETA)
+============================================================
+
+Marco Referencial
+
+Antecedentes investigativos
+
+La revisión sistemática de literatura realizada para este proyecto identificó y analizó 30 artículos académicos relevantes, publicados entre 2013 y 2025, en bases de datos como IEEE, ACM Digital Library, Scopus, Web of Science y repositorios institucionales. Los antecedentes se organizan en cuatro ejes temáticos:
+
+1. Avatares virtuales e interacción humano-IA
+
+Nam et al. (2025) presentaron el sistema Avagent, que permite crear avatares capaces de replicar señales verbales y no verbales de los usuarios. Su estudio con 30 participantes demostró que los avatares impulsados por IA mejoran significativamente la percepción de presencia social, el sentido de pertenencia y la intimidad emocional. Por su parte, Nowak y Fox (2018) revisaron cómo las representaciones digitales influyen en la percepción social, encontrando que factores como el antropomorfismo y el realismo visual afectan la interacción en entornos virtuales. Lazebnik et al. (2025) analizaron las dinámicas de cortesía en interacciones humano-IA con 1.684 participantes, evidenciando que los avatares con apariencia humana generan un comportamiento más respetuoso y sostenido. Osorio-Andrade et al. (2024) demostraron mediante un diseño experimental con 150 estudiantes que los presentadores humanos fueron percibidos como más creíbles que los avatares realistas, sugiriendo considerar el efecto "valle inquietante" en el diseño.
+
+Chattopadhyay et al. (2020) realizaron una revisión sistemática y meta-análisis de 53 artículos sobre humanos virtuales en sistemas orientados a pacientes, confirmando que estos mejoran la interacción y comunicación en comparación con métodos tradicionales. Collins et al. (2024) desarrollaron el proyecto Metahuman, una plataforma educativa donde los estudiantes interactúan con humanos virtuales en 3D para practicar habilidades comunicativas y profesionales, demostrando que los metahumanos impulsados por IA pueden mejorar el aprendizaje de habilidades blandas.
+
+2. Inteligencia artificial y habilidades comunicativas
+
+Chocobar Reyes et al. (2025) analizaron cómo las herramientas de IA generativa influyen en el desarrollo de habilidades comunicativas orales, encontrando que aumentan la confianza al hablar, mejoran la organización de ideas y favorecen la adquisición de vocabulario. González Olaya (2023) demostró que la incorporación de herramientas de IA en entornos educativos permite generar entornos de aprendizaje interactivos que fortalecen las habilidades comunicativas. Ayala Hernández y Haro Esquivel (2024) propusieron un modelo educativo donde la IA actúa como mediadora del aprendizaje, permitiendo retroalimentación inmediata y personalización. Toledo Purguaya et al. (2025) evidenciaron mejoras en la fluidez verbal, el vocabulario y la confianza de los estudiantes al comunicarse mediante herramientas de IA. Infante-Miranda et al. (2024) confirmaron que la IA puede fortalecer el desarrollo de competencias comunicativas y apoyar procesos de aprendizaje más interactivos en educación superior. Cely Betancourt et al. (s.f.) exploraron cómo la IA puede mejorar la enseñanza de habilidades comunicativas mediante interacción personalizada y feedback automático.
+
+3. Procesamiento de lenguaje natural y reconocimiento emocional
+
+Chen et al. (s.f.) revisaron cómo la IA ha transformado el Procesamiento de Lenguaje Natural (PLN), desde sistemas basados en reglas hasta modelos de aprendizaje profundo, destacando aplicaciones en chatbots y asistentes virtuales. Mundlamuri et al. (2025) analizaron la evolución desde el aprendizaje automático clásico hasta los modelos de lenguaje grande (LLMs) y arquitecturas RAG, que permiten generar interacciones más precisas y contextualizadas. Burgos et al. (s.f.) demostraron cómo técnicas de NLP pueden analizar y comprender lenguaje humano para extraer información relevante en contextos colombianos.
+
+En reconocimiento emocional, Qian et al. (2024) realizaron una revisión sistemática de 386 artículos sobre reconocimiento de emociones faciales en tiempo real, identificando que las redes neuronales convolucionales (CNNs) son las técnicas más utilizadas y logran alta precisión en las siete emociones básicas. Sowden et al. (2019) demostraron que la velocidad y dinámica del movimiento facial contienen información clave para reconocer emociones. Wegrzyn et al. (2017) identificaron que los ojos y la boca son las regiones más determinantes para el reconocimiento emocional, información aplicable al diseño de sistemas de IA interactivos.
+
+4. Diseño y ética en sistemas de IA
+
+Amershi et al. (2019) presentaron 18 guías de diseño para la interacción humano-IA, validadas con diseñadores y productos reales, que constituyen un marco práctico para diseñar sistemas comprensibles, confiables y efectivos. Campana Ruiz et al. (2024) analizaron el impacto de la IA en psicología, concluyendo que puede complementar pero no sustituir al profesional humano, ya que carece de experiencia subjetiva y empatía genuina. González (2025) propuso diez aplicaciones de la IA en investigación psicológica, incluyendo el concepto de "supereyo digital" como capa ética de autocontrol algorítmico.
+
+En el contexto colombiano, Rojas Rodríguez (2024) analizó la implementación de herramientas de IA en comunicación social, concluyendo que la IA puede mejorar la calidad educativa pero requiere políticas éticas y metodologías pedagógicas responsables. Florido Álvarez (2020) propuso un modelo de chatbot articulado con sistemas de gestión de procesos para el MinTIC, demostrando la viabilidad de la IA conversacional en el sector público colombiano. Trillos León y Trillos León (2025) diseñaron un asistente virtual para consultorios jurídicos universitarios usando Design Thinking, evidenciando el potencial de la IA para digitalizar la atención al usuario en comunidades vulnerables. Serrano Gómez (2025) implementó un asistente digital basado en IA con ASR y RAG, confirmando la factibilidad de integrar tecnologías avanzadas de IA en sistemas de asistencia cognitiva.
+
+Fundamentación conceptual
+
+Los conceptos clave que sustentan este proyecto son:
+
+Meta-humano interactivo: Sistema digital diseñado para simular la comunicación humana de manera realista y multicanal, integrando lenguaje verbal, visual y corporal. Según Collins et al. (2024), estos sistemas permiten a los usuarios practicar conversaciones complejas en un entorno seguro sin consecuencias reales.
+
+Inteligencia artificial social: Conjunto de técnicas aplicadas a la interacción humano-computador, que incluyen procesamiento de lenguaje natural, visión por computador y reconocimiento de emociones. Nam et al. (2025) demostraron que los avatares impulsados por IA mejoran la percepción de presencia social y conexión emocional.
+
+Procesamiento de lenguaje natural (PLN): Algoritmos y modelos que permiten a las máquinas comprender y generar lenguaje humano. Chen et al. (s.f.) documentaron la evolución desde sistemas basados en reglas hasta modelos de aprendizaje profundo como Transformers y LLMs, que potencian la generación de respuestas coherentes y contextuales.
+
+Reconocimiento de emociones y gestos: Tecnologías basadas en visión por computador que detectan expresiones faciales, lenguaje corporal y estados emocionales. Qian et al. (2024) identificaron que las CNNs logran alta precisión en tiempo real para las siete emociones básicas, mientras que Wegrzyn et al. (2017) demostraron que los ojos y la boca son las regiones más informativas para el reconocimiento emocional.
+
+Habilidades comunicativas y competencias socioemocionales: Conceptos de la psicología social que relacionan la comunicación efectiva con el bienestar mental y la integración social. Múltiples estudios (Chocobar Reyes et al., 2025; Toledo Purguaya et al., 2025; Infante-Miranda et al., 2024) confirman que la IA puede fortalecer estas habilidades mediante retroalimentación inmediata y práctica personalizada.
+
+Fobia social y aislamiento: Trastornos caracterizados por la dificultad para interactuar socialmente, incluyendo fenómenos como el Hikikomori, que generan consecuencias negativas en la salud mental. De Choudhury et al. (2013) demostraron que las redes sociales contienen señales útiles para predecir la depresión.
+
+Ética en inteligencia artificial: Principios que orientan el desarrollo responsable de sistemas de IA. Amershi et al. (2019) establecieron 18 guías de diseño para sistemas con IA, enfatizando la transparencia, el control del usuario y el manejo adecuado de errores. González (2025) propuso el concepto de "supereyo digital" como marco ético para la IA.
+
+Objetivos de Desarrollo Sostenible (ODS): El ODS 3 (Salud y bienestar) y el ODS 9 (Industria, innovación e infraestructura), que se relacionan con el uso de meta-humanos interactivos para promover la salud emocional y la innovación tecnológica inclusiva.
+
+
+============================================================
+SECCIÓN 3: METODOLOGÍA (REEMPLAZAR COMPLETA)
+============================================================
+
+Metodología
+
+Para el diseño e implementación del prototipo de meta-humano interactivo Filoxenia, se desarrolla una investigación aplicada con enfoque mixto. Se combinan elementos cualitativos, como la revisión bibliográfica y el análisis de necesidades de los usuarios, con elementos cuantitativos en la fase de validación y evaluación del prototipo.
+
+El proceso sigue un desarrollo iterativo alineado con las fases establecidas por el Sistema Nacional de Ciencia, Tecnología e Innovación (SNCTI) para proyectos tecnológicos. Como referencia de madurez, se utiliza la escala Technology Readiness Level (TRL), que permite medir el avance del prototipo desde su diseño inicial hasta las pruebas piloto.
+
+Avances metodológicos realizados
+
+Hasta la fecha, se han completado las siguientes fases:
+
+Revisión bibliográfica y diagnóstico (TRL 1-2) — COMPLETADA: Se realizó una revisión sistemática de 30 artículos académicos publicados entre 2013 y 2025 en bases de datos como IEEE, ACM Digital Library, Scopus y Web of Science, analizados mediante fichas RAE (Resumen Analítico Especializado). Esta revisión permitió identificar el estado del arte en avatares virtuales con IA, habilidades comunicativas mediadas por tecnología, reconocimiento emocional y diseño ético de sistemas de IA. Los hallazgos confirmaron la viabilidad técnica del proyecto y la necesidad de un enfoque que combine comprensión verbal, visual y corporal.
+
+Diseño conceptual (TRL 3) — COMPLETADA: Se definió la arquitectura general del sistema mediante un diagrama en bloques que integra los siguientes módulos: (a) Procesamiento del Lenguaje Natural, que incluye reconocimiento facial y reconocimiento de voz; (b) Procesamiento de datos; (c) Expresión de la IA en lenguaje natural, con expresión y vocalización del avatar y sintetizador de voz; (d) Módulo de configuración de comportamiento (RolePlay); y (e) interfaz de menú para el usuario. Se documentaron 30 requisitos funcionales organizados en cinco categorías: interacción (RF002, RF006, RF008-RF010, RF012, RF015, RF019-RF020, RF024, RF026), análisis (RF003-RF004, RF007, RF023), seguridad (RF001, RF013-RF014, RF022, RF030), evaluación (RF005, RF011, RF016-RF017, RF021) e investigación (RF018, RF025, RF027-RF029). Los requisitos no funcionales especifican rendimiento en tiempo real (<2s de respuesta en el 95% de interacciones) y confiabilidad (99% de disponibilidad). Adicionalmente, se presentó el proyecto en el evento X-PIN 2024-2 de la Universidad de Cundinamarca y se construyó un portafolio web del proyecto.
+
+Fases pendientes
+
+Desarrollo del prototipo (TRL 4-5)
+Objetivo: implementar el prototipo funcional del meta-humano interactivo.
+Método: integración de módulos de IA para lenguaje natural, reconocimiento de emociones y gestos, síntesis de voz y generación de respuestas adaptativas. Se realizarán pruebas unitarias.
+Instrumentos: entornos de desarrollo, frameworks de IA (modelos de lenguaje como LLMs, redes neuronales convolucionales para reconocimiento emocional), plataformas de prueba y herramientas de control de versiones.
+
+Pruebas piloto y validación (TRL 6-7)
+Objetivo: evaluar la funcionalidad y el impacto del prototipo en la comunicación de los usuarios.
+Método: aplicación del prototipo con grupos seleccionados de la Universidad de Cundinamarca, extensión Chía, recolectando datos cuantitativos y cualitativos sobre habilidades comunicativas y retroalimentación.
+Instrumentos: encuestas de usabilidad, escalas de medición, registros de interacción y entrevistas de retroalimentación.
+
+Análisis de resultados y lineamientos finales
+Objetivo: sistematizar la información obtenida y establecer lineamientos éticos.
+Método: análisis estadístico y cualitativo de los datos, optimización del prototipo y recomendaciones éticas y técnicas.
+Instrumentos: software de análisis estadístico y matrices de análisis cualitativo.
+
+Métodos e instrumentos
+
+Los instrumentos de recolección de datos incluyen:
+- Fichas RAE (Resumen Analítico Especializado) para la sistematización de la revisión bibliográfica (ya aplicadas a 30 artículos).
+- Diagramas UML y de bloques para la representación de la arquitectura del sistema (ya elaborados).
+- Documentos de requisitos funcionales y no funcionales (ya documentados: 30 requisitos funcionales).
+- Guiones de entrevista y cuestionarios de diagnóstico para la fase de pruebas piloto.
+- Encuestas de usabilidad y escalas de medición para la evaluación del prototipo.
+- Registros de interacción para el análisis de las sesiones con usuarios.
+
+Población y muestra
+
+La población de estudio estará conformada por estudiantes de la Universidad de Cundinamarca, extensión Chía, que presenten dificultades en la interacción social o que tengan interés en mejorar sus habilidades comunicativas.
+
+La muestra se seleccionará mediante muestreo por conveniencia, priorizando a los participantes que muestren disposición para interactuar con tecnologías de inteligencia artificial. El tamaño de la muestra y los criterios específicos se definirán durante la fase de pruebas piloto, de acuerdo con las necesidades de la investigación.
+
+
+============================================================
+SECCIÓN 4: CRONOGRAMA (REEMPLAZAR COMPLETA)
+============================================================
+
+Cronograma Estimado de Actividades
+
+Fase de la metodología (TRL) | Actividad | Mes 1 | Mes 2 | Mes 3 | Mes 4 | Mes 5 | Mes 6
+---|---|---|---|---|---|---|---
+1. Revisión bibliográfica y diagnóstico (TRL 1-2) | Revisión de literatura y levantamiento de necesidades | X (COMPLETADO) | X (COMPLETADO) | | | |
+2. Diseño conceptual (TRL 3) | Definición de arquitectura, requisitos del sistema y presentación X-PIN | | X (COMPLETADO) | X (COMPLETADO) | | |
+3. Desarrollo del prototipo (TRL 4-5) | Implementación del meta-humano y pruebas unitarias | | | X | X | X |
+4. Pruebas piloto y validación (TRL 6-7) | Pruebas con usuarios y recolección de datos | | | | | X | X
+5. Análisis y lineamientos finales | Análisis de resultados y recomendaciones éticas | | | | | | X
+TRL objetivo | Demostración del prototipo en entorno relevante (TRL 6-7) | | | | | | X
+
+
+============================================================
+SECCIÓN 5: IMPACTO ESPERADO (ACTUALIZAR)
+============================================================
+
+Impacto esperado
+
+La implementación de este prototipo se proyecta con impactos significativos en distintos ámbitos:
+
+Tecnológico: desarrollo de un meta-humano interactivo que integre procesamiento de lenguaje natural, reconocimiento de emociones y personalidad adaptable, representando un avance en la inteligencia artificial social en Colombia. La revisión de 30 artículos académicos confirma que las tecnologías necesarias (LLMs, CNNs, ASR, RAG, TTS) están disponibles y han demostrado viabilidad técnica en contextos similares (Mundlamuri et al., 2025; Qian et al., 2024; Serrano Gómez, 2025).
+
+Social: reducción del aislamiento y fomento de la inclusión, especialmente en personas con dificultades comunicativas, mejorando su bienestar emocional y su participación en entornos académicos, laborales y comunitarios. La evidencia muestra que los avatares con IA mejoran la presencia social y la conexión emocional (Nam et al., 2025) y que la IA puede fortalecer habilidades comunicativas mediante retroalimentación inmediata (Chocobar Reyes et al., 2025).
+
+Académico: apertura de espacios de investigación en inteligencia artificial social, ciencias del comportamiento y diseño de interfaces humano-computador, posicionando al programa de Ingeniería de Sistemas como referente en proyectos con impacto social. El proyecto ya cuenta con un portafolio web documentado, una presentación en el evento X-PIN 2024-2, y 30 requisitos funcionales definidos.
+
+Salud mental: fortalecimiento del bienestar emocional de los usuarios mediante una herramienta de apoyo que complemente, sin sustituir, las relaciones humanas reales. Las guías de Amershi et al. (2019) y las reflexiones éticas de Campana Ruiz et al. (2024) orientan el diseño responsable del sistema.
+
+
+============================================================
+SECCIÓN 6: CONCLUSIONES PRELIMINARES (ACTUALIZAR)
+============================================================
+
+Conclusiones preliminares
+
+Este anteproyecto responde a una necesidad creciente: fortalecer las habilidades comunicativas y reducir el aislamiento social mediante inteligencia artificial avanzada. Su relevancia radica en ofrecer una solución práctica a un problema real que afecta a diversos grupos poblacionales, aplicando directamente los conocimientos de la ingeniería de sistemas para mejorar el bienestar social y emocional.
+
+Los avances realizados hasta la fecha incluyen: (a) una revisión sistemática de 30 artículos académicos que confirma la viabilidad técnica y la pertinencia social del proyecto; (b) el diseño de la arquitectura del sistema con un diagrama en bloques que integra módulos de reconocimiento facial, reconocimiento de voz, procesamiento de datos, expresión del avatar y sintetizador de voz; (c) la documentación de 30 requisitos funcionales organizados en cinco categorías; (d) la presentación del proyecto en el evento X-PIN 2024-2 de la Universidad de Cundinamarca; y (e) la construcción de un portafolio web del proyecto.
+
+Los aportes esperados incluyen el desarrollo de un prototipo funcional de meta-humano capaz de integrar múltiples canales de comunicación (verbal, visual y corporal). La evidencia recopilada demuestra que los avatares con IA mejoran la presencia social y la conexión emocional (Nam et al., 2025), que las herramientas de IA fortalecen las habilidades comunicativas mediante retroalimentación inmediata (Chocobar Reyes et al., 2025), y que las tecnologías de reconocimiento emocional en tiempo real (CNNs, ResNet, VGG) alcanzan alta precisión (Qian et al., 2024). Se espera que Filoxenia se convierta en un referente para futuros proyectos en IA social con enfoque en salud mental y bienestar, promoviendo el uso responsable de la tecnología al servicio del desarrollo humano.
+
+
+============================================================
+SECCIÓN 7: REFERENCIAS (REEMPLAZAR COMPLETA)
+============================================================
+
+Referencias
+
+Amershi, S., Weld, D., Vorvoreanu, M., Fourney, A., Nushi, B., Collisson, P., Suh, J., Iqbal, S., Bennett, P. N., Inkpen, K., Teevan, J., Kikin-Gil, R., & Horvitz, E. (2019). Guidelines for Human-AI Interaction. In CHI Conference on Human Factors in Computing Systems Proceedings (pp. 1–13). ACM. https://doi.org/10.1145/3290605.3300233
+
+American Psychiatric Association. (2013). Diagnostic and statistical manual of mental disorders (5.ª ed.). Arlington, VA: American Psychiatric Publishing.
+
+Ayala Hernández, P., & Haro Esquivel, G. (2024). Mejorando la comunicación en el aula: modelo de educación basado en inteligencia artificial. Revista Científica Estudios y Perspectivas.
+
+Breazeal, C. (2003). Emotion and sociable humanoid robots. International Journal of Human-Computer Studies, 59(1–2), 119–155. https://doi.org/10.1016/S1071-5819(03)00018-1
+
+Burgos, M., Matituy, H., & Insuasti, J. (s.f.). Calls for Research at the University of Nariño: Perception Analysis Based on AI-Powered Computational Linguistics. Journal of Information Systems Engineering and Management.
+
+Campana Ruiz, G. T., Lamas Vidalón, V. M., Morales Andrade, A. J., & Pachas Romero, M. L. (2024). La IA y la psicología: ¿Puede la tecnología sustituir al profesional humano? Facultad de Psicología, Compendio de investigaciones de estudiantes.
+
+Cely Betancourt, B. L., Perdomo, E. J., Méndez Contreras, N., & Abril Calderón, R. (s.f.). The Contribution of Artificial Intelligence to the Teaching of Communicative Skills in the EFL Class. Revista Científica de Salud y Desarrollo Humano, Colombia.
+
+Chattopadhyay, D., Ma, T., Sharifi, H., & Martyn-Nemeth, P. (2020). Computer-controlled virtual humans in patient-facing systems: Systematic review and meta-analysis. Journal of Medical Internet Research, 22(7), e18839. https://doi.org/10.2196/18839
+
+Chen, Y., Wang, H., Yu, K., & Zhou, R. (s.f.). Artificial Intelligence Methods in Natural Language Processing: A Comprehensive Review.
+
+Chocobar Reyes, E. J., González Rodríguez, L. I., & Barreda Medina, R. F. (2025). Inteligencia artificial generativa y habilidades comunicativas orales en inglés de estudiantes. Revisión sistemática. Revista Arandu UTIC.
+
+Collins, E., Venaruzzo, L., & Komoder, A. (2024). Metahuman: Bridging the skills gap through immersive technology. In T. Cochrane et al. (Eds.), Navigating the Terrain: Emerging frontiers in learning spaces, pedagogies, and technologies (Proceedings ASCILITE 2024). https://doi.org/10.14742/apubs.2024.1117
+
+De Choudhury, M., Gamon, M., Counts, S., & Horvitz, E. (2013). Predicting Depression via Social Media. Proceedings of the Seventh International AAAI Conference on Weblogs and Social Media. AAAI Press.
+
+Florido Álvarez, A. (2020). Modelo de Chatbot de Inteligencia Artificial articulado con el Business Process Management (BPM) del Ministerio de Tecnologías de la Información y las Comunicaciones (MinTIC) para el área de la Subdirección para la Industria de Comunicaciones (SICom). Universidad EAN, Bogotá.
+
+González, F. (2025). Cómo hacer investigación psicológica con inteligencia artificial. XVII Congreso Internacional de Investigación y Práctica Profesional en Psicología. Facultad de Psicología, Universidad de Buenos Aires.
+
+González Olaya, H. L. (2023). Incorporación de la inteligencia artificial para el fortalecimiento de las habilidades comunicativas en los estudiantes de pregrado y posgrado de medicina de la Universidad Autónoma de Bucaramanga. Congreso Mundial de Educación Médica.
+
+Herazo Hoyos, C. A., Castillo Osorio, B., Domínguez Galeano, M., & Cabrales Montoya, Y. (2024). Asistentes virtuales y ChatGPT como herramienta personal y empresarial en Colombia. Revista Científica EconData. Universidad del Sinú Elías Bechara Zainum. https://doi.org/10.56205/econdata.1-1.5
+
+Holt-Lunstad, J. (2018). Why social relationships are important for physical health: A systems approach to understanding and modifying risk and protection. Annual Review of Psychology, 69, 437–458. https://doi.org/10.1146/annurev-psych-122216-011902
+
+Infante-Miranda, M. E., Hernández-Infante, R. C., Pupo-Pupo, Y., & Isea-Argüelles, J. J. (2024). La inteligencia artificial: impacto en el desarrollo de la competencia comunicativa en estudiantes de educación superior. Noesis. Revista Electrónica de Investigación.
+
+Lazebnik, T., Zalmanson, L., & Mokryn, O. (2025). Mind your manners: The dynamics of politeness in human-AI vs. human-human interactions. Proceedings of the ACM on Human-Computer Interaction, 9(7), 1-22. https://doi.org/10.1145/3757631
+
+Mundlamuri, R., Gunnam, G. R., Mysari, N. K., & Pujuri, J. (2025). The Evolution of AI: From Classical Machine Learning to Modern Large Language Models. IEEE Access, 13, 178302–178341. https://doi.org/10.1109/ACCESS.2025.3621344
+
+Murcia, D., Jaime Osorio, M. F., Jaramillo Calderón, L. F., & Hoyos Pipicano, Y. A. (s.f.). GenAI in Language Teaching, Learning, and Assessment: Stakeholders Insights from Two Undergraduate Language Programs. Revista Lenguaje, Universidad del Valle, Colombia.
+
+Nam, H., Sarvesh, M., Kang, S., Woo, W., & Kim, K. (2025). Effects of AI-powered embodied avatars on communication quality and social connection in asynchronous virtual meetings. IEEE Transactions on Visualization and Computer Graphics, 31(11), 10152–10162. https://doi.org/10.1109/TVCG.2025.3616761
+
+Nowak, K. L., & Fox, J. (2018). Avatars and computer-mediated communication: A review of the definitions, uses, and effects of digital representations. Review of Communication Research, 6, 30–53. https://doi.org/10.12840/issn.2255-4165.2018.06.01.015
+
+Osorio-Andrade, C. F., Arango-Espinal, E., & Arango-Pastrana, C. A. (2024). De lo real a lo ficticio: evaluación de la credibilidad de noticias difundidas por humanos y por avatares creados con inteligencia artificial. Palabra Clave, 27(3), e2738. https://doi.org/10.5294/pacla.2024.27.3.8
+
+Qian, C., Marques, J. A. L., & de Alexandri, A. R. (2024). Real-time emotion recognition based on facial expressions using Artificial Intelligence techniques: A review and future directions. Institute for Data Engineering and Science, University of Saint Joseph.
+
+Rojas-Contreras, M., Rojas Contreras, O. L., & Mojica Acevedo, E. C. (s.f.). Impacto de la Inteligencia Artificial Generativa en la Comunicación Científica. Mundo FESC, Colombia.
+
+Rojas Rodríguez, L. A. (2024). Análisis descriptivo sobre la aplicación de herramientas de Inteligencia Artificial (IA) para la carrera de Comunicación Social de la Universidad Cooperativa de Colombia para el año 2024. Universidad Cooperativa de Colombia, Bogotá.
+
+Romero-Gomez, A. F., & Orjuela-Canon, Á. D. (s.f.). Natural Language Processing Approach for Learning Process Analysis in a Bioinformatics Course. Universidad del Rosario, Colombia.
+
+Rubin, K. H., Bukowski, W. M., & Laursen, B. (2011). Handbook of peer interactions, relationships, and groups. New York: Guilford Press.
+
+Serrano Gómez, J. (2025). Asistente digital para pilotos basado en IA con comandos de voz (ASR) y recuperación de información generativa (RAG). Trabajo Fin de Máster, Máster Universitario en Ingeniería Aeronáutica, Universidad de Sevilla.
+
+Sowden, S. L., Schuster, B. A., & Cook, J. L. (2019). The role of movement kinematics in facial emotion expression. Frontiers in Human Neuroscience Conference Abstract. https://doi.org/10.3389/conf.fnhum.2019.229.00018
+
+Toledo Purguaya, R. J., Padilla Caballero, J. E., Huamán Malca, W. A., & Lescano Panez, L. J. (2025). Integración de la inteligencia artificial en habilidades comunicativas en estudiantes del nivel inicial. Revista Tribunal.
+
+Trillos León, N. E., & Trillos León, R. D. (2025). Diseño de un Asistente Virtual Orientado a Digitalizar la Atención al Usuario en los Consultorios Jurídicos Universitarios Regulados por el Ministerio de Justicia y del Derecho en Colombia. Universidad de la Costa (CUC), Barranquilla.
+
+Turkle, S. (2011). Alone together: Why we expect more from technology and less from each other. New York: Basic Books.
+
+Wegrzyn, M., Vogt, M., Kireclioglu, B., Schneider, J., & Kissler, J. (2017). Mapping the emotional face: How individual face parts contribute to successful emotion recognition. PLoS ONE, 12(5), e0177239. https://doi.org/10.1371/journal.pone.0177239
