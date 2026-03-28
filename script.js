@@ -352,18 +352,19 @@
                         window.location.hostname === 'localhost' ||
                         window.location.hostname === '127.0.0.1';
 
-        if (isPdf) {
-            // PDFs se renderizan directo en el iframe
-            return filePath;
-        }
-
         if (isLocal) {
-            // En local, Office files no se pueden previsualizar con viewer externo
+            // En local, no se pueden previsualizar con viewer externo
             return null;
         }
 
-        // En producción, usar Microsoft Office Online Viewer
         const fullUrl = new URL(filePath, window.location.href).href;
+
+        if (isPdf) {
+            // PDFs usan Google Docs Viewer
+            return 'https://docs.google.com/gview?url=' + encodeURIComponent(fullUrl) + '&embedded=true';
+        }
+
+        // Office files usan Microsoft Office Online Viewer
         return 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(fullUrl);
     }
 
@@ -382,7 +383,7 @@
                 <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;font-family:Inter,sans-serif;color:#4e5578;text-align:center;padding:40px;">
                     <div style="font-size:4rem;margin-bottom:20px;">📄</div>
                     <h3 style="margin-bottom:8px;color:#1b1f3b;">Vista previa no disponible en local</h3>
-                    <p style="max-width:400px;line-height:1.6;">Los archivos Office (DOCX, PPTX, XLSX) requieren que el sitio esté desplegado en un servidor para poder previsualizarse.<br><br>Puedes descargar el archivo usando el botón de arriba.</p>
+                    <p style="max-width:400px;line-height:1.6;">Los archivos (PDF, DOCX, PPTX, XLSX) requieren que el sitio esté desplegado en un servidor para poder previsualizarse.<br><br>Puedes descargar el archivo usando el botón de arriba.</p>
                 </div>`;
             docPreviewLoader.classList.add('hidden');
         } else {
