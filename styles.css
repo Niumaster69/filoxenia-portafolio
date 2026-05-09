@@ -346,7 +346,10 @@ ul {
 .navbar__menu {
     display: flex;
     align-items: center;
-    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 6px;
+    list-style: none;
 }
 
 .navbar__link {
@@ -1970,6 +1973,7 @@ ul {
    ============================================================ */
 .navbar__dropdown {
     position: relative;
+    list-style: none;
 }
 
 .navbar__link--has-sub {
@@ -1990,7 +1994,10 @@ ul {
     transform: rotate(180deg);
 }
 
+/* Submenú: oculto por defecto con display:none — bulletproof.
+   Se vuelve a display:block solo en hover/focus/open. */
 .navbar__submenu {
+    display: none;
     position: absolute;
     top: calc(100% + 8px);
     left: 0;
@@ -1999,21 +2006,26 @@ ul {
     border: 1px solid var(--border-color);
     border-radius: var(--radius);
     padding: 8px;
+    margin: 0;
     box-shadow: var(--shadow-lg);
     list-style: none;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-8px);
-    transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
-    z-index: 1000;
+    z-index: 1100;
+    animation: navbarSubmenuFade 0.18s ease-out;
+}
+
+@keyframes navbarSubmenuFade {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 .navbar__dropdown:hover > .navbar__submenu,
 .navbar__dropdown:focus-within > .navbar__submenu,
 .navbar__dropdown.open > .navbar__submenu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+    display: block;
+}
+
+.navbar__submenu li {
+    list-style: none;
 }
 
 .navbar__sublink {
@@ -2024,6 +2036,7 @@ ul {
     border-radius: var(--radius-sm);
     transition: var(--transition);
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .navbar__sublink:hover,
@@ -2380,30 +2393,41 @@ ul {
 
 @media (max-width: 768px) {
     /* Dropdown en mobile: se vuelve acordeón */
+    .navbar__menu {
+        flex-wrap: nowrap;
+        overflow-y: auto;
+    }
     .navbar__dropdown {
         width: 100%;
     }
+    /* En mobile el submenú es estático (acordeón). Hover NO aplica. */
     .navbar__submenu {
+        display: none;
         position: static;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
         background: transparent;
         border: none;
         box-shadow: none;
         padding: 4px 0 4px 16px;
         margin-top: 4px;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height var(--transition);
+        animation: none;
     }
     .navbar__dropdown.open > .navbar__submenu {
-        max-height: 500px;
+        display: block;
+    }
+    /* Anular hover en mobile (toques no son hover) */
+    .navbar__dropdown:hover > .navbar__submenu,
+    .navbar__dropdown:focus-within > .navbar__submenu {
+        display: none;
+    }
+    .navbar__dropdown.open:hover > .navbar__submenu,
+    .navbar__dropdown.open:focus-within > .navbar__submenu {
+        display: block;
     }
     .navbar__sublink {
         padding: 10px 12px;
         font-size: 0.95rem;
         border-left: 2px solid var(--border-color);
+        white-space: normal;
     }
     .navbar__sublink:hover,
     .navbar__sublink.active {
