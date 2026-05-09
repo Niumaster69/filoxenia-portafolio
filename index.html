@@ -54,13 +54,40 @@
             </button>
             <ul class="navbar__menu" id="navMenu">
                 <li><a href="#inicio" class="navbar__link active">Inicio</a></li>
-                <li><a href="#sobre" class="navbar__link">Sobre el Proyecto</a></li>
-                <li><a href="#timeline" class="navbar__link">Hitos</a></li>
+                <li><a href="#sobre" class="navbar__link">Sobre</a></li>
+                <li class="navbar__dropdown">
+                    <a href="#marco-logico" class="navbar__link navbar__link--has-sub">Marco Lógico <span class="navbar__caret">▾</span></a>
+                    <ul class="navbar__submenu">
+                        <li><a href="#involucrados" class="navbar__sublink">1. Involucrados</a></li>
+                        <li><a href="#arbol-problemas" class="navbar__sublink">2. Árbol de Problemas</a></li>
+                        <li><a href="#arbol-objetivos" class="navbar__sublink">3. Árbol de Objetivos</a></li>
+                        <li><a href="#alternativas" class="navbar__sublink">4. Alternativas</a></li>
+                        <li><a href="#matriz-accion" class="navbar__sublink">5. Matriz Acción</a></li>
+                        <li><a href="#eap" class="navbar__sublink">6. EAP</a></li>
+                        <li><a href="#resumen-narrativo" class="navbar__sublink">7. Resumen Narrativo</a></li>
+                    </ul>
+                </li>
+                <li><a href="#anteproyecto" class="navbar__link">Anteproyecto</a></li>
+                <li class="navbar__dropdown">
+                    <a href="#variables" class="navbar__link navbar__link--has-sub">Variables <span class="navbar__caret">▾</span></a>
+                    <ul class="navbar__submenu">
+                        <li><a href="#matriz-variables" class="navbar__sublink">Matriz de Variables</a></li>
+                        <li><a href="#operacionalizacion" class="navbar__sublink">Operacionalización</a></li>
+                        <li><a href="#consistencia" class="navbar__sublink">Consistencia</a></li>
+                    </ul>
+                </li>
                 <li><a href="#requisitos" class="navbar__link">Requisitos</a></li>
+                <li class="navbar__dropdown">
+                    <a href="#rae" class="navbar__link navbar__link--has-sub">RAE <span class="navbar__caret">▾</span></a>
+                    <ul class="navbar__submenu">
+                        <li><a href="#rae-doc" class="navbar__sublink">Documento RAE</a></li>
+                        <li><a href="#articulos" class="navbar__sublink">Artículos (15)</a></li>
+                    </ul>
+                </li>
+                <li><a href="#timeline" class="navbar__link">Hitos</a></li>
                 <li><a href="#galeria" class="navbar__link">Galería</a></li>
-                <li><a href="#documentos" class="navbar__link">Documentos</a></li>
                 <li><a href="#equipo" class="navbar__link">Equipo</a></li>
-                <li><a href="#info" class="navbar__link">Información</a></li>
+                <li><a href="#info" class="navbar__link">Info</a></li>
             </ul>
         </div>
     </nav>
@@ -195,11 +222,287 @@
         </div>
     </section>
 
+    <!-- ========== MARCO LÓGICO ========== -->
+    <section id="marco-logico" class="section marco-logico">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__tag">02 — Marco Lógico</span>
+                <h2 class="section__title">7 Pasos del Marco Lógico</h2>
+                <p class="section__subtitle">Construcción metodológica del proyecto Filoxenia, desde el análisis de actores hasta el resumen narrativo. Cada paso enlaza directo a su diagrama y al documento fuente.</p>
+                <div class="marco-logico__source">
+                    <button class="btn btn--preview btn--small" data-file="Documentacion principal/Portafolio_Filoxenia_Actualizado.docx" data-title="Portafolio Marco Lógico — Documento Fuente">📄 Ver documento fuente completo</button>
+                    <a href="Documentacion principal/Portafolio_Filoxenia_Actualizado.docx" download class="btn btn--small">Descargar DOCX</a>
+                </div>
+            </div>
+
+            <!-- PASO 1 -->
+            <div id="involucrados" class="ml-step" data-aos="fade-up">
+                <div class="ml-step__header">
+                    <span class="ml-step__number">01</span>
+                    <h3 class="ml-step__title">Análisis de Involucrados</h3>
+                </div>
+                <div class="ml-step__body">
+                    <p>Identificación de todos los actores con interés, influencia o vínculo en la problemática que aborda Filoxenia. Se compone de dos productos: el <strong>Mapa de Actores</strong> (matriz Influencia × Interés) y el <strong>Listado E.F.R</strong> (Expectativa · Fuerza · Recurso).</p>
+                    <h4 class="ml-step__subtitle">1.1 Mapa de Actores</h4>
+                    <p>El cuadrante crítico es <em>"Gestionar de cerca"</em> (equipo investigador, director de programa, tutor). <em>"Mantener satisfechos"</em> agrupa al comité de ética y vicerrectoría académica. <em>"Mantener informados"</em> incluye a los estudiantes participantes y docentes facilitadores.</p>
+                    <figure class="ml-figure">
+                        <img src="assets/marco-logico/fig1-mapa-actores.png" alt="Mapa de Actores Filoxenia" loading="lazy">
+                        <figcaption>Figura 1. Mapa de actores del proyecto Filoxenia (Influencia × Interés)</figcaption>
+                    </figure>
+                    <h4 class="ml-step__subtitle">1.2 Listado E.F.R</h4>
+                    <p>Para cada actor se desglosan tres dimensiones: <strong>Expectativa</strong> (qué espera del proyecto), <strong>Fuerza</strong> (nivel de poder e influencia) y <strong>Recurso</strong> (medios, conocimientos o aportes que puede proporcionar). La triangulación entre las tres dimensiones permite anticipar conflictos, identificar alianzas y dimensionar los recursos disponibles.</p>
+                    <figure class="ml-figure">
+                        <img src="assets/marco-logico/fig2-listado-efr.png" alt="Listado E.F.R Filoxenia" loading="lazy">
+                        <figcaption>Figura 2. Listado de Involucrados (Expectativa · Fuerza · Recurso)</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- PASO 2 -->
+            <div id="arbol-problemas" class="ml-step" data-aos="fade-up">
+                <div class="ml-step__header">
+                    <span class="ml-step__number">02</span>
+                    <h3 class="ml-step__title">Árbol de Problemas</h3>
+                </div>
+                <div class="ml-step__body">
+                    <p>Visualización jerárquica de la relación causal entre el problema central, sus causas y sus efectos. Se desarrolla en dos direcciones: hacia abajo (causas) y hacia arriba (efectos).</p>
+                    <h4 class="ml-step__subtitle">2.1 Problema Central</h4>
+                    <blockquote class="ml-quote">"Insuficiente desarrollo de habilidades comunicativas e integración social en estudiantes universitarios mediante el uso responsable de inteligencia artificial multimodal."</blockquote>
+                    <h4 class="ml-step__subtitle">2.2 Efectos y Causas</h4>
+                    <p><strong>5 efectos globales:</strong> disminución de la calidad comunicativa (E1), aumento del aislamiento social (E2), reducción de oportunidades de integración (E3), deterioro del bienestar emocional (E4) y limitada participación ciudadana (E5).</p>
+                    <p><strong>5 causas globales:</strong> falta de espacios seguros de práctica conversacional (C1), sobreexposición a interacciones digitales superficiales (C2), factores psicológicos de timidez y ansiedad (C3), ausencia de retroalimentación inmediata (C4) y estigmatización de las dificultades comunicativas (C5).</p>
+                    <figure class="ml-figure">
+                        <img src="assets/marco-logico/fig3-arbol-problemas.png" alt="Árbol de Problemas Filoxenia" loading="lazy">
+                        <figcaption>Figura 3. Árbol de Problemas (Efectos → Problema Central → Causas)</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- PASO 3 -->
+            <div id="arbol-objetivos" class="ml-step" data-aos="fade-up">
+                <div class="ml-step__header">
+                    <span class="ml-step__number">03</span>
+                    <h3 class="ml-step__title">Árbol de Objetivos</h3>
+                </div>
+                <div class="ml-step__body">
+                    <p>Espejo positivo del árbol de problemas: cada efecto se transforma en un <strong>fin</strong> (situación deseada) y cada causa en un <strong>medio</strong> (acción concreta del proyecto).</p>
+                    <h4 class="ml-step__subtitle">3.1 Fines y Medios</h4>
+                    <p><strong>5 medios globales</strong> (correspondencia 1-a-1 con las causas):</p>
+                    <ul class="ml-list">
+                        <li><strong>M1</strong> Crear espacios seguros de práctica con IA → atiende C1</li>
+                        <li><strong>M2</strong> Diseñar interacciones con profundidad emocional → atiende C2</li>
+                        <li><strong>M3</strong> Incorporar niveles graduados de interacción → atiende C3</li>
+                        <li><strong>M4</strong> Implementar retroalimentación automática inmediata → atiende C4</li>
+                        <li><strong>M5</strong> Desarrollar el módulo ético de uso responsable → atiende C5</li>
+                    </ul>
+                    <figure class="ml-figure">
+                        <img src="assets/marco-logico/fig4-arbol-objetivos.png" alt="Árbol de Objetivos Filoxenia" loading="lazy">
+                        <figcaption>Figura 4. Árbol de Objetivos (Fines → Objetivo Central → Medios)</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- PASO 4 -->
+            <div id="alternativas" class="ml-step" data-aos="fade-up">
+                <div class="ml-step__header">
+                    <span class="ml-step__number">04</span>
+                    <h3 class="ml-step__title">Análisis de Alternativas</h3>
+                </div>
+                <div class="ml-step__body">
+                    <p>Cuatro estrategias evaluadas mediante 7 criterios técnicos, éticos y de viabilidad (escala 1–5). La selección no es arbitraria sino el resultado de un proceso comparativo riguroso.</p>
+                    <h4 class="ml-step__subtitle">4.1 Alternativas Identificadas</h4>
+                    <ul class="ml-list">
+                        <li><strong>A1 Filoxenia:</strong> IA conversacional multimodal con metahumano</li>
+                        <li><strong>A2 Talleres:</strong> Talleres presenciales con docentes facilitadores</li>
+                        <li><strong>A3 App Tutores:</strong> Aplicación móvil con tutores humanos remotos</li>
+                        <li><strong>A4 Chatbot:</strong> Chatbot textual simple pre-programado</li>
+                    </ul>
+                    <h4 class="ml-step__subtitle">4.2 Matriz de Evaluación Comparativa</h4>
+                    <div class="ml-table-wrap">
+                        <table class="ml-table">
+                            <thead>
+                                <tr><th>Criterio</th><th>A1 Filoxenia</th><th>A2 Talleres</th><th>A3 App Tutores</th><th>A4 Chatbot</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Escalabilidad (cobertura)</td><td>5</td><td>2</td><td>3</td><td>5</td></tr>
+                                <tr><td>Costo de implementación</td><td>3</td><td>4</td><td>2</td><td>5</td></tr>
+                                <tr><td>Disponibilidad permanente (24/7)</td><td>5</td><td>1</td><td>2</td><td>5</td></tr>
+                                <tr><td>Fidelidad emocional y multimodal</td><td>5</td><td>4</td><td>3</td><td>1</td></tr>
+                                <tr><td>Espacio seguro libre de juicio</td><td>5</td><td>2</td><td>3</td><td>4</td></tr>
+                                <tr><td>Retroalimentación inmediata</td><td>5</td><td>3</td><td>3</td><td>4</td></tr>
+                                <tr><td>Viabilidad ética y control</td><td>4</td><td>5</td><td>4</td><td>3</td></tr>
+                                <tr class="ml-table__total"><td><strong>TOTAL (sobre 35)</strong></td><td><strong>32</strong></td><td>21</td><td>20</td><td>27</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h4 class="ml-step__subtitle">4.3 Selección Justificada</h4>
+                    <p>La <strong>alternativa A1 (Filoxenia)</strong> obtiene 32/35 y se selecciona por tres aspectos diferenciales: (1) la combinación multimodal atiende simultáneamente las cinco causas del árbol de problemas; (2) la disponibilidad permanente elimina barreras temporales y geográficas; (3) el módulo ético supervisorio (M5) permite controles automáticos que las otras alternativas no ofrecen. La A2 se conserva como complemento posible en una fase posterior de hibridación.</p>
+                </div>
+            </div>
+
+            <!-- PASO 5 -->
+            <div id="matriz-accion" class="ml-step" data-aos="fade-up">
+                <div class="ml-step__header">
+                    <span class="ml-step__number">05</span>
+                    <h3 class="ml-step__title">Matriz Acción → Medio → Causa → Problema</h3>
+                </div>
+                <div class="ml-step__body">
+                    <p>Sistematiza la trazabilidad completa entre cada acción del proyecto y el problema que se busca resolver. Ninguna acción es arbitraria: cada una responde directamente a una causa identificada en el árbol de problemas.</p>
+                    <h4 class="ml-step__subtitle">5.1 Trazabilidad de Acciones</h4>
+                    <figure class="ml-figure">
+                        <img src="assets/marco-logico/fig5-matriz-accion.png" alt="Matriz Acción-Medio-Causa-Problema" loading="lazy">
+                        <figcaption>Figura 5. Matriz Acción → Medio → Causa → Problema</figcaption>
+                    </figure>
+                    <h4 class="ml-step__subtitle">5.2 Despliegue de Medios con Sub-Acciones</h4>
+                    <p>Cada medio integra entre 3 y 4 sub-acciones técnicas específicas. <strong>M1 (PLN)</strong>: LLM, RAG, ASR, gestión de turnos. <strong>M2 (reconocimiento emocional)</strong>: CNN sobre AU faciales, cinemática, regiones. <strong>M3 (reconocimiento corporal)</strong>: pose, gestos, postura. <strong>M4 (síntesis de voz)</strong>: TTS prosódico, adaptación contextual, personalidad. <strong>M5 (módulo ético)</strong>: filtros de contenido, auditoría, monitoreo de sesgos, límites de uso.</p>
+                    <figure class="ml-figure">
+                        <img src="assets/marco-logico/fig6-despliegue-medios.png" alt="Despliegue de medios" loading="lazy">
+                        <figcaption>Figura 6. Despliegue de los 5 medios con sus sub-acciones</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- PASO 6 -->
+            <div id="eap" class="ml-step" data-aos="fade-up">
+                <div class="ml-step__header">
+                    <span class="ml-step__number">06</span>
+                    <h3 class="ml-step__title">Estructura Analítica del Proyecto (EAP)</h3>
+                </div>
+                <div class="ml-step__body">
+                    <p>Consolida en una representación jerárquica única los productos generados en los pasos anteriores, organizados en cuatro niveles:</p>
+                    <ul class="ml-list">
+                        <li><strong>Fin:</strong> Contribuir al fortalecimiento del bienestar comunicativo y la integración social de estudiantes universitarios en Colombia mediante el uso responsable de IA multimodal.</li>
+                        <li><strong>Propósito:</strong> Validar empíricamente que el prototipo Filoxenia fortalece estas habilidades sin generar dependencia tecnológica.</li>
+                        <li><strong>Componentes (5):</strong> Módulo PLN, módulo reconocimiento emocional, módulo reconocimiento corporal, módulo síntesis de voz, módulo ético supervisorio.</li>
+                        <li><strong>Actividades:</strong> Tareas concretas planificadas para producir cada componente.</li>
+                    </ul>
+                    <figure class="ml-figure">
+                        <img src="assets/marco-logico/fig7-eap.png" alt="EAP Filoxenia" loading="lazy">
+                        <figcaption>Figura 7. Estructura Analítica del Proyecto (EAP)</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- PASO 7 -->
+            <div id="resumen-narrativo" class="ml-step" data-aos="fade-up">
+                <div class="ml-step__header">
+                    <span class="ml-step__number">07</span>
+                    <h3 class="ml-step__title">Resumen Narrativo (Matriz de Marco Lógico)</h3>
+                </div>
+                <div class="ml-step__body">
+                    <p>Consolidación final que articula los 4 niveles de la EAP con sus indicadores, medios de verificación y supuestos. Responde a 4 preguntas: qué se quiere lograr, cómo se medirá, dónde se obtendrá la evidencia y qué condiciones externas deben cumplirse.</p>
+                    <h4 class="ml-step__subtitle">Indicadores verificables</h4>
+                    <ul class="ml-list">
+                        <li><strong>Fin:</strong> +15% en bienestar comunicativo y participación social a 6 meses post-intervención.</li>
+                        <li><strong>Propósito:</strong> mejora estadísticamente significativa (p&lt;0.05) en escalas Likert de habilidades comunicativas (V2) entre T0 y T2, sin incremento en dependencia tecnológica (V3).</li>
+                        <li><strong>Componentes (técnicos):</strong> WER del ASR &lt;8%, precisión clasificador emocional &gt;80%, latencia media &lt;2s, MOS de voz ≥3.5.</li>
+                    </ul>
+                    <h4 class="ml-step__subtitle">Supuestos críticos</h4>
+                    <p>Voluntad institucional de adopción ética de IA · permanencia de los participantes durante las 4 semanas de intervención · disponibilidad de APIs de LLMs durante el desarrollo · ausencia de eventos disruptivos institucionales.</p>
+                    <figure class="ml-figure">
+                        <img src="assets/marco-logico/fig8-resumen-narrativo.png" alt="Resumen Narrativo Filoxenia" loading="lazy">
+                        <figcaption>Figura 8. Resumen Narrativo del proyecto Filoxenia (Matriz de Marco Lógico)</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ANTEPROYECTO ========== -->
+    <section id="anteproyecto" class="section anteproyecto">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__tag">03 — Anteproyecto</span>
+                <h2 class="section__title">Anteproyecto de Investigación</h2>
+                <p class="section__subtitle">Documento institucional CAI CTeI con planteamiento, marco referencial, metodología y cronograma.</p>
+            </div>
+            <div class="anteproyecto__grid">
+                <div class="anteproyecto__card" data-aos="fade-right">
+                    <div class="anteproyecto__icon">📘</div>
+                    <h3>Anteproyecto Completo (v2)</h3>
+                    <p>Versión actualizada con el planteamiento del problema, marco referencial sustentado en 30 RAEs, metodología TRL y cronograma.</p>
+                    <div class="anteproyecto__actions">
+                        <button class="btn btn--preview" data-file="Documentacion principal/Anteproyecto_Filoxenia_Completo (2).docx" data-title="Anteproyecto Filoxenia Completo (v2)">Vista previa</button>
+                        <a href="Documentacion principal/Anteproyecto_Filoxenia_Completo (2).docx" download class="btn btn--small">Descargar DOCX</a>
+                    </div>
+                </div>
+                <div class="anteproyecto__card" data-aos="fade-left">
+                    <div class="anteproyecto__icon">📋</div>
+                    <h3>Plantilla CAI CTeI</h3>
+                    <p>Plantilla institucional original del anteproyecto CAI CTeI Nivelatorio.</p>
+                    <div class="anteproyecto__actions">
+                        <button class="btn btn--preview" data-file="Documentacion principal/PLANTILLA ANTEPROYECTO DE INVESTIGACIÓN CAI CTeI - NIVELATORIO (3).docx" data-title="Plantilla Anteproyecto CAI CTeI">Vista previa</button>
+                        <a href="Documentacion principal/PLANTILLA ANTEPROYECTO DE INVESTIGACIÓN CAI CTeI - NIVELATORIO (3).docx" download class="btn btn--small">Descargar</a>
+                    </div>
+                </div>
+                <div class="anteproyecto__card" data-aos="fade-up">
+                    <div class="anteproyecto__icon">📝</div>
+                    <h3>Notas de Actualización</h3>
+                    <p>Cambios introducidos en la versión actualizada del anteproyecto: nuevas secciones, integración de 30 RAEs y refinamiento metodológico.</p>
+                    <div class="anteproyecto__actions">
+                        <a href="Documentacion principal/ACTUALIZACION_ANTEPROYECTO.txt" download class="btn btn--small">Descargar TXT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== VARIABLES DE INVESTIGACIÓN ========== -->
+    <section id="variables" class="section variables">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__tag">04 — Variables</span>
+                <h2 class="section__title">Variables de Investigación</h2>
+                <p class="section__subtitle">19 variables fundamentales (7 independientes + 5 dependientes + 3 moderadoras + 4 de control), trazables a los 30 autores del RAE.</p>
+            </div>
+
+            <div id="matriz-variables" class="var-block" data-aos="fade-up">
+                <div class="var-block__header">
+                    <span class="var-block__icon">📊</span>
+                    <h3 class="var-block__title">Matriz de Variables</h3>
+                </div>
+                <p>Sistematiza todas las variables del proyecto extraídas de la pregunta problema y de los 30 artículos del RAE. Documenta para cada variable su nombre, autor(es), definición, comparación entre autores y la decisión adoptada por el equipo Filoxenia.</p>
+                <div class="var-block__actions">
+                    <button class="btn btn--preview" data-file="Documentacion principal/Matriz_Variables_Filoxenia .docx" data-title="Matriz de Variables Filoxenia">Vista previa DOCX</button>
+                    <button class="btn btn--preview btn--small" data-file="Documentacion principal/VARIABLES_DE_INVESTIGACION.docx" data-title="Variables de Investigación (versión Markdown)">Versión narrativa</button>
+                    <a href="Documentacion principal/Matriz_Variables_Filoxenia .docx" download class="btn btn--small">Descargar DOCX</a>
+                    <a href="Documentacion principal/VARIABLES_DE_INVESTIGACION.md" download class="btn btn--small">Descargar MD</a>
+                </div>
+            </div>
+
+            <div id="operacionalizacion" class="var-block" data-aos="fade-up">
+                <div class="var-block__header">
+                    <span class="var-block__icon">⚙️</span>
+                    <h3 class="var-block__title">Matriz de Operacionalización (v2)</h3>
+                </div>
+                <p>Operacionaliza cada variable dependiente con su instrumento específico: escala, ítem, métrica. Vincula directamente con los instrumentos de validación de la fase de pruebas piloto del prototipo.</p>
+                <div class="var-block__actions">
+                    <button class="btn btn--preview" data-file="Documentacion principal/Filoxenia_Matriz_Operacionalizacion_v2.xlsx" data-title="Matriz de Operacionalización v2">Vista previa XLSX</button>
+                    <a href="Documentacion principal/Filoxenia_Matriz_Operacionalizacion_v2.xlsx" download class="btn btn--small">Descargar XLSX</a>
+                </div>
+            </div>
+
+            <div id="consistencia" class="var-block" data-aos="fade-up">
+                <div class="var-block__header">
+                    <span class="var-block__icon">🔗</span>
+                    <h3 class="var-block__title">Matriz de Consistencia</h3>
+                </div>
+                <p>Articula problema, objetivos, hipótesis, variables y metodología en una sola tabla. Garantiza la coherencia interna del diseño investigativo y constituye el insumo directo para el análisis de resultados.</p>
+                <div class="var-block__actions">
+                    <button class="btn btn--preview" data-file="Documentacion principal/MATRIZ DE CONSISTENCIA.pdf" data-title="Matriz de Consistencia (PDF)">Vista previa PDF</button>
+                    <button class="btn btn--preview btn--small" data-file="Documentacion principal/Matriz_Consistencia.xlsx" data-title="Matriz de Consistencia (XLSX)">Versión editable</button>
+                    <a href="Documentacion principal/MATRIZ DE CONSISTENCIA.pdf" download class="btn btn--small">Descargar PDF</a>
+                    <a href="Documentacion principal/Matriz_Consistencia.xlsx" download class="btn btn--small">Descargar XLSX</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ========== TIMELINE ========== -->
     <section id="timeline" class="section timeline-section">
         <div class="container">
             <div class="section__header" data-aos="fade-up">
-                <span class="section__tag">02 — Línea de Tiempo</span>
+                <span class="section__tag">05 — Cronograma</span>
                 <h2 class="section__title">Hitos del Proyecto</h2>
             </div>
             <div class="timeline">
@@ -270,7 +573,7 @@
     <section id="requisitos" class="section requisitos">
         <div class="container">
             <div class="section__header" data-aos="fade-up">
-                <span class="section__tag">03 — Funcionalidades</span>
+                <span class="section__tag">06 — Funcionalidades</span>
                 <h2 class="section__title">Requisitos del Sistema</h2>
                 <p class="section__subtitle">30 requisitos funcionales que definen las capacidades de Filoxenia</p>
             </div>
@@ -449,7 +752,7 @@
     <section id="galeria" class="section galeria">
         <div class="container">
             <div class="section__header" data-aos="fade-up">
-                <span class="section__tag">04 — Evidencias</span>
+                <span class="section__tag">07 — Evidencias</span>
                 <h2 class="section__title">Galería del Proyecto</h2>
                 <p class="section__subtitle">Documentación visual del proceso de investigación y desarrollo</p>
             </div>
@@ -528,87 +831,22 @@
         </div>
     </div>
 
-    <!-- ========== DOCUMENTOS ========== -->
-    <section id="documentos" class="section documentos">
+    <!-- ========== DOCUMENTOS / RAE ========== -->
+    <section id="rae" class="section documentos">
         <div class="container">
             <div class="section__header" data-aos="fade-up">
-                <span class="section__tag">05 — Documentación</span>
-                <h2 class="section__title">Documentos del Proyecto</h2>
-                <p class="section__subtitle">Accede y descarga los documentos clave de la investigación</p>
+                <span class="section__tag">08 — RAE y Documentación</span>
+                <h2 class="section__title">RAE — Sistematización de la Información</h2>
+                <p class="section__subtitle">30 Resúmenes Analíticos Especializados (2013-2025) y artículos académicos que sustentan el proyecto.</p>
             </div>
 
-            <div class="documentos__grid">
-                <div class="doc-card" data-aos="fade-up">
-                    <div class="doc-card__icon">📄</div>
-                    <div class="doc-card__info">
-                        <h4>Anteproyecto de Investigación</h4>
-                        <p>Plantilla completa del anteproyecto CAI CTeI con el marco referencial, metodología y cronograma.</p>
-                        <span class="doc-card__meta">DOCX · Documentación Principal</span>
-                    </div>
-                    <div class="doc-card__actions">
-                        <button class="btn btn--preview" data-file="Documentacion principal/PLANTILLA ANTEPROYECTO DE INVESTIGACIÓN CAI CTeI - NIVELATORIO (3).docx" data-title="Anteproyecto de Investigación">Vista previa</button>
-                        <a href="Documentacion principal/PLANTILLA ANTEPROYECTO DE INVESTIGACIÓN CAI CTeI - NIVELATORIO (3).docx" class="btn btn--small" download>Descargar</a>
-                    </div>
-                </div>
-
-                <div class="doc-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="doc-card__icon">📊</div>
-                    <div class="doc-card__info">
-                        <h4>Presentación del Proyecto</h4>
-                        <p>Presentación de Programación I con el planteamiento del problema, objetivos y metodología.</p>
-                        <span class="doc-card__meta">PPTX · Documentación Principal</span>
-                    </div>
-                    <div class="doc-card__actions">
-                        <button class="btn btn--preview" data-file="Documentacion principal/Presentacion de progrmacion I.pptx" data-title="Presentación del Proyecto">Vista previa</button>
-                        <a href="Documentacion principal/Presentacion de progrmacion I.pptx" class="btn btn--small" download>Descargar</a>
-                    </div>
-                </div>
-
-                <div class="doc-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="doc-card__icon">🤖</div>
-                    <div class="doc-card__info">
-                        <h4>Presentación IA Futurista</h4>
-                        <p>Presentación sobre inteligencia artificial y su aplicación en el contexto del proyecto.</p>
-                        <span class="doc-card__meta">PDF · Documentación Principal</span>
-                    </div>
-                    <div class="doc-card__actions">
-                        <button class="btn btn--preview" data-file="Documentacion principal/Presentación Inteligencia artificial Futurista _compressed (1).pdf" data-title="Presentación IA Futurista">Vista previa</button>
-                        <a href="Documentacion principal/Presentación Inteligencia artificial Futurista _compressed (1).pdf" class="btn btn--small" download>Descargar</a>
-                    </div>
-                </div>
-
-                <div class="doc-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="doc-card__icon">🧠</div>
-                    <div class="doc-card__info">
-                        <h4>Pensamientos y Actividad Cognitiva</h4>
-                        <p>Documento sobre actividad cognitiva aplicada al análisis del comportamiento social.</p>
-                        <span class="doc-card__meta">PDF · Documentación Principal</span>
-                    </div>
-                    <div class="doc-card__actions">
-                        <button class="btn btn--preview" data-file="Documentacion principal/R1-A1-S3 Pensamientos, Actividad Cognitiva (2).pdf" data-title="Pensamientos y Actividad Cognitiva">Vista previa</button>
-                        <a href="Documentacion principal/R1-A1-S3 Pensamientos, Actividad Cognitiva (2).pdf" class="btn btn--small" download>Descargar</a>
-                    </div>
-                </div>
-
-                <div class="doc-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="doc-card__icon">📋</div>
-                    <div class="doc-card__info">
-                        <h4>Requisitos Funcionales y No Funcionales</h4>
-                        <p>Especificación completa de los 30 requisitos funcionales y requisitos no funcionales del sistema.</p>
-                        <span class="doc-card__meta">XLSX · Documentación Principal</span>
-                    </div>
-                    <div class="doc-card__actions">
-                        <button class="btn btn--preview" data-file="Documentacion principal/REQUISITOS FUNCIONALES Y NO FUNCIONALES.xlsx" data-title="Requisitos Funcionales y No Funcionales">Vista previa</button>
-                        <a href="Documentacion principal/REQUISITOS FUNCIONALES Y NO FUNCIONALES.xlsx" class="btn btn--small" download>Descargar</a>
-                    </div>
-                </div>
-
-                <div class="doc-card" data-aos="fade-up" data-aos-delay="500">
+            <div id="rae-doc" class="documentos__grid">
+                <div class="doc-card doc-card--featured" data-aos="fade-up">
                     <div class="doc-card__icon">📝</div>
                     <div class="doc-card__info">
-                        <h4>RAE - Sistematización de la Información</h4>
+                        <h4>RAE — Sistematización de la Información</h4>
                         <p>30 Resúmenes Analíticos Especializados de artículos académicos (2013-2025) sobre avatares con IA, habilidades comunicativas, reconocimiento emocional y ética en IA.</p>
-                        <span class="doc-card__meta">PDF · Documentación Principal</span>
+                        <span class="doc-card__meta">PDF · Documento principal</span>
                     </div>
                     <div class="doc-card__actions">
                         <button class="btn btn--preview" data-file="Documentacion principal/Resumen Analítico Especializado RAE - Sistematización de la Información..pdf" data-title="RAE - Sistematización de la Información">Vista previa</button>
@@ -616,102 +854,193 @@
                     </div>
                 </div>
 
-                <div class="doc-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="doc-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="doc-card__icon">🎓</div>
                     <div class="doc-card__info">
                         <h4>Poster X-PIN 2024-2</h4>
                         <p>Poster presentado en el evento X-PIN 2024-2 con la arquitectura del sistema, diagrama en bloques, metodología y resultados esperados.</p>
-                        <span class="doc-card__meta">PDF · Documentación Principal</span>
+                        <span class="doc-card__meta">PDF · Evento académico</span>
                     </div>
                     <div class="doc-card__actions">
                         <button class="btn btn--preview" data-file="Documentacion principal/UNIVERSIDAD DE CUNDINAMARCA Facultad de Ingeniería y Computación ext. Chía Colocar el nombre del evento X-PIN 2024-2 de Semestre - EIS.pdf" data-title="Evento X-PIN 2024-2">Vista previa</button>
                         <a href="Documentacion principal/UNIVERSIDAD DE CUNDINAMARCA Facultad de Ingeniería y Computación ext. Chía Colocar el nombre del evento X-PIN 2024-2 de Semestre - EIS.pdf" class="btn btn--small" download>Descargar</a>
                     </div>
                 </div>
-                <div class="doc-card" data-aos="fade-up" data-aos-delay="700">
-                    <div class="doc-card__icon">📐</div>
+
+                <div class="doc-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="doc-card__icon">📊</div>
                     <div class="doc-card__info">
-                        <h4>Matriz de Consistencia</h4>
-                        <p>Matriz de consistencia que articula problema, objetivos, hipótesis, variables y metodología de la investigación.</p>
-                        <span class="doc-card__meta">PDF · Documentación Principal</span>
+                        <h4>Presentación de Programación I</h4>
+                        <p>Planteamiento del problema, objetivos y metodología presentados en el curso de Programación I.</p>
+                        <span class="doc-card__meta">PPTX · Presentación</span>
                     </div>
                     <div class="doc-card__actions">
-                        <button class="btn btn--preview" data-file="Documentacion principal/MATRIZ DE CONSISTENCIA.pdf" data-title="Matriz de Consistencia">Vista previa</button>
-                        <a href="Documentacion principal/MATRIZ DE CONSISTENCIA.pdf" class="btn btn--small" download>Descargar</a>
+                        <button class="btn btn--preview" data-file="Documentacion principal/Presentacion de progrmacion I.pptx" data-title="Presentación de Programación I">Vista previa</button>
+                        <a href="Documentacion principal/Presentacion de progrmacion I.pptx" class="btn btn--small" download>Descargar</a>
+                    </div>
+                </div>
+
+                <div class="doc-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="doc-card__icon">🤖</div>
+                    <div class="doc-card__info">
+                        <h4>Presentación IA Futurista</h4>
+                        <p>Presentación sobre inteligencia artificial y su aplicación en el contexto del proyecto.</p>
+                        <span class="doc-card__meta">PDF · Presentación</span>
+                    </div>
+                    <div class="doc-card__actions">
+                        <button class="btn btn--preview" data-file="Documentacion principal/Presentación Inteligencia artificial Futurista _compressed (1).pdf" data-title="Presentación IA Futurista">Vista previa</button>
+                        <a href="Documentacion principal/Presentación Inteligencia artificial Futurista _compressed (1).pdf" class="btn btn--small" download>Descargar</a>
+                    </div>
+                </div>
+
+                <div class="doc-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="doc-card__icon">🧠</div>
+                    <div class="doc-card__info">
+                        <h4>Pensamientos y Actividad Cognitiva</h4>
+                        <p>Documento sobre actividad cognitiva aplicada al análisis del comportamiento social.</p>
+                        <span class="doc-card__meta">PDF · Marco teórico</span>
+                    </div>
+                    <div class="doc-card__actions">
+                        <button class="btn btn--preview" data-file="Documentacion principal/R1-A1-S3 Pensamientos, Actividad Cognitiva (2).pdf" data-title="Pensamientos y Actividad Cognitiva">Vista previa</button>
+                        <a href="Documentacion principal/R1-A1-S3 Pensamientos, Actividad Cognitiva (2).pdf" class="btn btn--small" download>Descargar</a>
+                    </div>
+                </div>
+
+                <div class="doc-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="doc-card__icon">📋</div>
+                    <div class="doc-card__info">
+                        <h4>Requisitos Funcionales y No Funcionales</h4>
+                        <p>Especificación completa de los 30 requisitos funcionales y requisitos no funcionales del sistema (versión editable).</p>
+                        <span class="doc-card__meta">XLSX · Especificación</span>
+                    </div>
+                    <div class="doc-card__actions">
+                        <button class="btn btn--preview" data-file="Documentacion principal/REQUISITOS FUNCIONALES Y NO FUNCIONALES.xlsx" data-title="Requisitos Funcionales y No Funcionales">Vista previa</button>
+                        <a href="Documentacion principal/REQUISITOS FUNCIONALES Y NO FUNCIONALES.xlsx" class="btn btn--small" download>Descargar</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Referencias Bibliográficas -->
-            <div class="documentos__references" data-aos="fade-up">
-                <h3>Referencias Bibliográficas</h3>
-                <p class="documentos__ref-desc">Artículos y documentos de investigación que fundamentan el proyecto</p>
+            <!-- Artículos académicos del RAE -->
+            <div id="articulos" class="documentos__references" data-aos="fade-up">
+                <h3>Artículos del RAE</h3>
+                <p class="documentos__ref-desc">Artículos académicos referenciados en el RAE que fundamentan el marco teórico del proyecto</p>
                 <div class="documentos__ref-grid">
                     <div class="ref-card">
                         <span class="ref-card__type">PDF</span>
                         <h5>La IA y la Psicología</h5>
                         <div class="ref-card__actions">
-                            <button class="ref-card__link ref-card__link--preview" data-file="Referencias/3. La IA y la psicología.pdf" data-title="La IA y la Psicología">Vista previa</button>
-                            <a href="Referencias/3. La IA y la psicología.pdf" download class="ref-card__link">Descargar</a>
+                            <button class="ref-card__link ref-card__link--preview" data-file="Documentacion principal/Articulos/3. La IA y la psicología.pdf" data-title="La IA y la Psicología">Vista previa</button>
+                            <a href="Documentacion principal/Articulos/3. La IA y la psicología.pdf" download class="ref-card__link">Descargar</a>
                         </div>
                     </div>
                     <div class="ref-card">
                         <span class="ref-card__type">PDF</span>
                         <h5>Guías para la Interacción Humano-IA</h5>
                         <div class="ref-card__actions">
-                            <button class="ref-card__link ref-card__link--preview" data-file="Referencias/Guías para la Interacción Humano-IA.pdf" data-title="Guías para la Interacción Humano-IA">Vista previa</button>
-                            <a href="Referencias/Guías para la Interacción Humano-IA.pdf" download class="ref-card__link">Descargar</a>
+                            <button class="ref-card__link ref-card__link--preview" data-file="Documentacion principal/Articulos/Guías para la Interacción Humano-IA.pdf" data-title="Guías para la Interacción Humano-IA (Amershi et al., 2019)">Vista previa</button>
+                            <a href="Documentacion principal/Articulos/Guías para la Interacción Humano-IA.pdf" download class="ref-card__link">Descargar</a>
                         </div>
                     </div>
                     <div class="ref-card">
                         <span class="ref-card__type">PDF</span>
                         <h5>Predicción de la Depresión a través de Redes Sociales</h5>
                         <div class="ref-card__actions">
-                            <button class="ref-card__link ref-card__link--preview" data-file="Referencias/Predicción de la Depresión a través de Redes Sociales.pdf" data-title="Predicción de la Depresión a través de Redes Sociales">Vista previa</button>
-                            <a href="Referencias/Predicción de la Depresión a través de Redes Sociales.pdf" download class="ref-card__link">Descargar</a>
+                            <button class="ref-card__link ref-card__link--preview" data-file="Documentacion principal/Articulos/Predicción de la Depresión a través de Redes Sociales.pdf" data-title="Predicción de la Depresión a través de Redes Sociales (De Choudhury et al., 2013)">Vista previa</button>
+                            <a href="Documentacion principal/Articulos/Predicción de la Depresión a través de Redes Sociales.pdf" download class="ref-card__link">Descargar</a>
                         </div>
                     </div>
                     <div class="ref-card">
                         <span class="ref-card__type">PDF</span>
-                        <h5>Asistente Digital para Pilotos basado en IA</h5>
+                        <h5>Asistente Digital para Pilotos (ASR + RAG)</h5>
                         <div class="ref-card__actions">
-                            <button class="ref-card__link ref-card__link--preview" data-file="Referencias/Asistente digital para pilotos basado en IA con comandos de voz (ASR) y recuperación de información generativa (RAG).pdf" data-title="Asistente Digital para Pilotos basado en IA">Vista previa</button>
-                            <a href="Referencias/Asistente digital para pilotos basado en IA con comandos de voz (ASR) y recuperación de información generativa (RAG).pdf" download class="ref-card__link">Descargar</a>
+                            <button class="ref-card__link ref-card__link--preview" data-file="Documentacion principal/Articulos/Asistente digital para pilotos basado en IA con comandos de voz (ASR) y recuperación de información generativa (RAG).pdf" data-title="Asistente Digital para Pilotos basado en IA (Serrano Gómez, 2025)">Vista previa</button>
+                            <a href="Documentacion principal/Articulos/Asistente digital para pilotos basado en IA con comandos de voz (ASR) y recuperación de información generativa (RAG).pdf" download class="ref-card__link">Descargar</a>
                         </div>
                     </div>
                     <div class="ref-card">
                         <span class="ref-card__type">PDF</span>
-                        <h5>Diseño de Asistente Virtual para Consultorios Jurídicos</h5>
+                        <h5>Asistente Virtual para Consultorios Jurídicos</h5>
                         <div class="ref-card__actions">
-                            <button class="ref-card__link ref-card__link--preview" data-file="Referencias/DISEÑO DE ASISTENTE VIRTUAL PARA CONSULTORIOS JURÍDICOS..pdf" data-title="Diseño de Asistente Virtual para Consultorios Jurídicos">Vista previa</button>
-                            <a href="Referencias/DISEÑO DE ASISTENTE VIRTUAL PARA CONSULTORIOS JURÍDICOS..pdf" download class="ref-card__link">Descargar</a>
+                            <button class="ref-card__link ref-card__link--preview" data-file="Documentacion principal/Articulos/DISEÑO DE ASISTENTE VIRTUAL PARA CONSULTORIOS JURÍDICOS..pdf" data-title="Diseño de Asistente Virtual para Consultorios Jurídicos (Trillos León & Trillos León, 2025)">Vista previa</button>
+                            <a href="Documentacion principal/Articulos/DISEÑO DE ASISTENTE VIRTUAL PARA CONSULTORIOS JURÍDICOS..pdf" download class="ref-card__link">Descargar</a>
                         </div>
                     </div>
                     <div class="ref-card">
                         <span class="ref-card__type">PDF</span>
                         <h5>Investigación Psicológica con IA</h5>
                         <div class="ref-card__actions">
-                            <button class="ref-card__link ref-card__link--preview" data-file="Referencias/González, Federico (2025). Cómo hacer investigación psicológica con inteligencia artificial.pdf" data-title="Investigación Psicológica con IA">Vista previa</button>
-                            <a href="Referencias/González, Federico (2025). Cómo hacer investigación psicológica con inteligencia artificial.pdf" download class="ref-card__link">Descargar</a>
+                            <button class="ref-card__link ref-card__link--preview" data-file="Documentacion principal/Articulos/González, Federico (2025). Cómo hacer investigación psicológica con inteligencia artificial.pdf" data-title="Investigación Psicológica con IA (González, F., 2025)">Vista previa</button>
+                            <a href="Documentacion principal/Articulos/González, Federico (2025). Cómo hacer investigación psicológica con inteligencia artificial.pdf" download class="ref-card__link">Descargar</a>
                         </div>
                     </div>
                     <div class="ref-card">
                         <span class="ref-card__type">PDF</span>
-                        <h5>Análisis de IA en Comunicación Social</h5>
+                        <h5>IA en Comunicación Social — U. Cooperativa</h5>
                         <div class="ref-card__actions">
-                            <button class="ref-card__link ref-card__link--preview" data-file="Referencias/Análisis descriptivo sobre la aplicación de herramientas de Inteligencia Artificial (IA) para la carrera de Comunicación Social de la Universidad Cooperativa de Colombia para el año.pdf" data-title="Análisis de IA en Comunicación Social">Vista previa</button>
-                            <a href="Referencias/Análisis descriptivo sobre la aplicación de herramientas de Inteligencia Artificial (IA) para la carrera de Comunicación Social de la Universidad Cooperativa de Colombia para el año.pdf" download class="ref-card__link">Descargar</a>
+                            <button class="ref-card__link ref-card__link--preview" data-file="Documentacion principal/Articulos/Rojas_2024_IA_Comunicacion_Social_UCC.pdf" data-title="IA en Comunicación Social (Rojas Rodríguez, 2024)">Vista previa</button>
+                            <a href="Documentacion principal/Articulos/Rojas_2024_IA_Comunicacion_Social_UCC.pdf" download class="ref-card__link">Descargar</a>
                         </div>
                     </div>
                     <div class="ref-card">
                         <span class="ref-card__type">PDF</span>
-                        <h5>Credibilidad de Noticias: Humanos vs IA</h5>
+                        <h5>Credibilidad: Humanos vs Avatares con IA</h5>
                         <div class="ref-card__actions">
-                            <button class="ref-card__link ref-card__link--preview" data-file="Referencias/De lo real a lo ficticio_ evaluación de la credibilidad de noticias difundidas por humanos y por avatares creados con inteligencia artificial.pdf" data-title="Credibilidad de Noticias: Humanos vs IA">Vista previa</button>
-                            <a href="Referencias/De lo real a lo ficticio_ evaluación de la credibilidad de noticias difundidas por humanos y por avatares creados con inteligencia artificial.pdf" download class="ref-card__link">Descargar</a>
+                            <button class="ref-card__link ref-card__link--preview" data-file="Documentacion principal/Articulos/De lo real a lo ficticio_ evaluación de la credibilidad de noticias difundidas por humanos y por avatares creados con inteligencia artificial.pdf" data-title="Credibilidad de Noticias: Humanos vs Avatares IA (Osorio-Andrade et al., 2024)">Vista previa</button>
+                            <a href="Documentacion principal/Articulos/De lo real a lo ficticio_ evaluación de la credibilidad de noticias difundidas por humanos y por avatares creados con inteligencia artificial.pdf" download class="ref-card__link">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="ref-card">
+                        <span class="ref-card__type">PDF</span>
+                        <h5>Cortesía en Interacciones Humano-IA</h5>
+                        <div class="ref-card__actions">
+                            <button class="ref-card__link ref-card__link--preview" data-file="Documentacion principal/Articulos/3757631.pdf" data-title="Mind your manners: dynamics of politeness (Lazebnik et al., 2025)">Vista previa</button>
+                            <a href="Documentacion principal/Articulos/3757631.pdf" download class="ref-card__link">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="ref-card">
+                        <span class="ref-card__type">PDF</span>
+                        <h5>Avagent — Avatares con IA en reuniones virtuales</h5>
+                        <div class="ref-card__actions">
+                            <button class="ref-card__link ref-card__link--preview" data-file="Documentacion principal/Articulos/e2025328.pdf" data-title="Avagent: Avatares con IA (Nam et al., 2025)">Vista previa</button>
+                            <a href="Documentacion principal/Articulos/e2025328.pdf" download class="ref-card__link">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="ref-card">
+                        <span class="ref-card__type">PDF</span>
+                        <h5>Humanos virtuales en sistemas para pacientes</h5>
+                        <div class="ref-card__actions">
+                            <button class="ref-card__link ref-card__link--preview" data-file="Documentacion principal/Articulos/jmir-2020-7-e18839.pdf" data-title="Virtual humans in patient-facing systems (Chattopadhyay et al., 2020)">Vista previa</button>
+                            <a href="Documentacion principal/Articulos/jmir-2020-7-e18839.pdf" download class="ref-card__link">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="ref-card">
+                        <span class="ref-card__type">PDF</span>
+                        <h5>Metahuman Project (ASCILITE 2024)</h5>
+                        <div class="ref-card__actions">
+                            <button class="ref-card__link ref-card__link--preview" data-file="Documentacion principal/Articulos/ncowie,+1117-ASCILITE+Conference+Poster+14-15.pdf" data-title="Metahuman: Bridging the skills gap (Collins et al., 2024)">Vista previa</button>
+                            <a href="Documentacion principal/Articulos/ncowie,+1117-ASCILITE+Conference+Poster+14-15.pdf" download class="ref-card__link">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="ref-card">
+                        <span class="ref-card__type">PDF</span>
+                        <h5>Habilidades Comunicativas con IA Generativa</h5>
+                        <div class="ref-card__actions">
+                            <button class="ref-card__link ref-card__link--preview" data-file="Documentacion principal/Articulos/39-Published+Article-1060-1-10-20220127.pdf" data-title="IA generativa y habilidades comunicativas orales (Chocobar Reyes et al., 2025)">Vista previa</button>
+                            <a href="Documentacion principal/Articulos/39-Published+Article-1060-1-10-20220127.pdf" download class="ref-card__link">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="ref-card">
+                        <span class="ref-card__type">PDF</span>
+                        <h5>Reconocimiento Emocional Facial en Tiempo Real</h5>
+                        <div class="ref-card__actions">
+                            <button class="ref-card__link ref-card__link--preview" data-file="Documentacion principal/Articulos/file.pdf" data-title="Real-time emotion recognition (Qian et al., 2024)">Vista previa</button>
+                            <a href="Documentacion principal/Articulos/file.pdf" download class="ref-card__link">Descargar</a>
                         </div>
                     </div>
                 </div>
+                <p class="documentos__note">
+                    <small>📍 La carpeta original <code>Referencias/</code> contiene copias adicionales y se mantiene como respaldo. La carpeta canónica para los artículos es <code>Documentacion principal/Articulos/</code>.</small>
+                </p>
             </div>
         </div>
     </section>
@@ -759,7 +1088,7 @@
     <section id="equipo" class="section equipo">
         <div class="container">
             <div class="section__header" data-aos="fade-up">
-                <span class="section__tag">06 — Equipo</span>
+                <span class="section__tag">09 — Equipo</span>
                 <h2 class="section__title">Nuestro Equipo</h2>
                 <p class="section__subtitle">Los investigadores y desarrolladores detrás de Filoxenia</p>
             </div>
@@ -799,7 +1128,7 @@
     <section id="info" class="section contacto">
         <div class="container">
             <div class="section__header" data-aos="fade-up">
-                <span class="section__tag">07 — Información</span>
+                <span class="section__tag">10 — Información</span>
                 <h2 class="section__title">Información Institucional</h2>
                 <p class="section__subtitle">Datos académicos del proyecto de investigación</p>
             </div>
@@ -863,17 +1192,28 @@
                     <p>IA Conversacional Meta-Humana para el Desarrollo y Análisis del Comportamiento Social Humano</p>
                 </div>
                 <div class="footer__links">
-                    <h4>Navegación</h4>
-                    <a href="#inicio">Inicio</a>
-                    <a href="#sobre">Sobre el Proyecto</a>
-                    <a href="#timeline">Hitos</a>
-                    <a href="#equipo">Equipo</a>
+                    <h4>Marco Lógico</h4>
+                    <a href="#involucrados">1. Involucrados</a>
+                    <a href="#arbol-problemas">2. Árbol de Problemas</a>
+                    <a href="#arbol-objetivos">3. Árbol de Objetivos</a>
+                    <a href="#alternativas">4. Alternativas</a>
+                    <a href="#matriz-accion">5. Matriz Acción</a>
+                    <a href="#eap">6. EAP</a>
+                    <a href="#resumen-narrativo">7. Resumen Narrativo</a>
                 </div>
                 <div class="footer__links">
-                    <h4>Recursos</h4>
+                    <h4>Documentación</h4>
+                    <a href="#anteproyecto">Anteproyecto</a>
+                    <a href="#variables">Variables</a>
                     <a href="#requisitos">Requisitos</a>
+                    <a href="#rae">RAE y Artículos</a>
+                </div>
+                <div class="footer__links">
+                    <h4>Proyecto</h4>
+                    <a href="#sobre">Sobre Filoxenia</a>
+                    <a href="#timeline">Hitos / Cronograma</a>
                     <a href="#galeria">Galería</a>
-                    <a href="#documentos">Documentos</a>
+                    <a href="#equipo">Equipo</a>
                     <a href="#info">Información</a>
                 </div>
             </div>

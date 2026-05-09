@@ -112,6 +112,9 @@
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('navMenu');
     const navLinks = document.querySelectorAll('.navbar__link');
+    const navSubLinks = document.querySelectorAll('.navbar__sublink');
+    const navDropdowns = document.querySelectorAll('.navbar__dropdown');
+    const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
 
     // Scroll effect
     window.addEventListener('scroll', () => {
@@ -128,34 +131,89 @@
         });
     }
 
-    // Cerrar menú al hacer clic en un enlace
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (hamburger) hamburger.classList.remove('active');
-            if (navMenu) navMenu.classList.remove('active');
+    // Dropdown toggle (en mobile expande el submenú; en desktop usa hover CSS)
+    navDropdowns.forEach(dropdown => {
+        const trigger = dropdown.querySelector('.navbar__link--has-sub');
+        if (!trigger) return;
+        trigger.addEventListener('click', (e) => {
+            if (isMobile()) {
+                e.preventDefault();
+                // cerrar otros dropdowns abiertos
+                navDropdowns.forEach(d => { if (d !== dropdown) d.classList.remove('open'); });
+                dropdown.classList.toggle('open');
+            }
         });
     });
 
-    /* ===== Active Nav Link on Scroll ===== */
-    const sections = document.querySelectorAll('section[id]');
+    // Cerrar menú/dropdowns al hacer clic en un enlace de navegación
+    const closeMenu = () => {
+        if (hamburger) hamburger.classList.remove('active');
+        if (navMenu) navMenu.classList.remove('active');
+        navDropdowns.forEach(d => d.classList.remove('open'));
+    };
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            // Si el link es la cabecera de un dropdown en mobile, no cerrar (ya lo maneja el toggle)
+            if (link.classList.contains('navbar__link--has-sub') && isMobile()) return;
+            closeMenu();
+        });
+    });
+    navSubLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Cerrar dropdowns al click fuera (desktop)
+    document.addEventListener('click', (e) => {
+        if (isMobile()) return;
+        if (!e.target.closest('.navbar__dropdown')) {
+            navDropdowns.forEach(d => d.classList.remove('open'));
+        }
+    });
+
+    /* ===== Active Nav Link on Scroll (con sub-secciones) ===== */
+    // Incluir secciones tradicionales + los sub-anchors del Marco Lógico, Variables y RAE
+    const subAnchors = document.querySelectorAll('.ml-step[id], .var-block[id], #rae-doc, #articulos');
+    const allSections = [...document.querySelectorAll('section[id]'), ...subAnchors];
+
+    function getOffsetTop(el) {
+        let top = 0;
+        while (el) { top += el.offsetTop; el = el.offsetParent; }
+        return top;
+    }
 
     function updateActiveLink() {
-        const scrollPos = window.scrollY + 100;
+        const scrollPos = window.scrollY + 120;
+        let activeId = null;
 
-        sections.forEach(section => {
-            const top = section.offsetTop;
+        allSections.forEach(section => {
+            const top = getOffsetTop(section);
             const height = section.offsetHeight;
             const id = section.getAttribute('id');
-
             if (scrollPos >= top && scrollPos < top + height) {
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === '#' + id) {
-                        link.classList.add('active');
-                    }
-                });
+                activeId = id;
             }
         });
+
+        if (!activeId) return;
+
+        // limpia activos
+        navLinks.forEach(link => link.classList.remove('active'));
+        navSubLinks.forEach(link => link.classList.remove('active'));
+
+        // marca el sublink activo (si aplica) y propaga al dropdown padre
+        const activeSubLink = document.querySelector(`.navbar__sublink[href="#${activeId}"]`);
+        if (activeSubLink) {
+            activeSubLink.classList.add('active');
+            const parentDropdown = activeSubLink.closest('.navbar__dropdown');
+            const parentLink = parentDropdown?.querySelector('.navbar__link--has-sub');
+            if (parentLink) parentLink.classList.add('active');
+            return;
+        }
+
+        // si no hay sublink, marca el link directo
+        const activeLink = document.querySelector(`.navbar__link[href="#${activeId}"]`);
+        if (activeLink) activeLink.classList.add('active');
     }
 
     window.addEventListener('scroll', updateActiveLink);
@@ -318,6 +376,21 @@
         });
 
         item.addEventListener('click', () => openLightbox(i));
+    });
+
+    // Vincular figuras del Marco Lógico al lightbox
+    const mlFigures = document.querySelectorAll('.ml-figure');
+    mlFigures.forEach(fig => {
+        const img = fig.querySelector('img');
+        const caption = fig.querySelector('figcaption');
+        if (!img) return;
+        const idx = lightboxItems.length;
+        lightboxItems.push({
+            img: img.getAttribute('src'),
+            title: img.getAttribute('alt') || 'Diagrama Marco Lógico',
+            desc: caption ? caption.textContent : ''
+        });
+        img.addEventListener('click', () => openLightbox(idx));
     });
 
     if (lightbox) {
