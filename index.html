@@ -7,7 +7,7 @@
     <meta name="keywords" content="Filoxenia, IA, inteligencia artificial, meta-humano, comportamiento social, Universidad de Cundinamarca">
     <meta name="author" content="Cristhian Aza, Duvan Lozano, Henry Ortega">
     <title>Filoxenia | IA Conversacional Meta-Humana</title>
-    <link rel="stylesheet" href="styles.css?v=2026-05-12">
+    <link rel="stylesheet" href="styles.css?v=2026-05-12b">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,11 +84,16 @@
                         <li><a href="#articulos" class="navbar__sublink">Artículos (15)</a></li>
                     </ul>
                 </li>
-                <li><a href="#timeline" class="navbar__link">Hitos</a></li>
-                <li><a href="#galeria" class="navbar__link">Galería</a></li>
                 <li><a href="#video" class="navbar__link">Pechakucha</a></li>
-                <li><a href="#equipo" class="navbar__link">Equipo</a></li>
-                <li><a href="#info" class="navbar__link">Info</a></li>
+                <li class="navbar__dropdown">
+                    <a href="#timeline" class="navbar__link navbar__link--has-sub">Proyecto <span class="navbar__caret">▾</span></a>
+                    <ul class="navbar__submenu">
+                        <li><a href="#timeline" class="navbar__sublink">Hitos</a></li>
+                        <li><a href="#galeria" class="navbar__sublink">Galería</a></li>
+                        <li><a href="#equipo" class="navbar__sublink">Equipo</a></li>
+                        <li><a href="#info" class="navbar__sublink">Info Institucional</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </nav>
@@ -1095,13 +1100,13 @@
             </div>
 
             <div class="video-section__wrapper" data-aos="fade-up">
-                <button
+                <div
                     id="videoLauncher"
-                    class="video-section__placeholder"
-                    type="button"
+                    class="video-section__player"
                     data-video-embed="https://www.youtube.com/embed/pKNAGj9yizA?autoplay=1&rel=0"
-                    data-video-title="Pechakucha — Filoxenia"
-                    aria-label="Abrir pechakucha en ventana flotante">
+                    role="button"
+                    tabindex="0"
+                    aria-label="Reproducir pechakucha de Filoxenia">
                     <div class="video-section__placeholder-bg" style="background-image: url('assets/marco-logico/portada.jpeg');"></div>
                     <div class="video-section__placeholder-overlay"></div>
                     <div class="video-section__placeholder-content">
@@ -1118,9 +1123,9 @@
                             </svg>
                         </div>
                         <span class="video-section__placeholder-label">Reproducir Pechakucha</span>
-                        <p class="video-section__placeholder-hint">Se abrirá una ventana flotante con el video desde YouTube — podrás moverla y mantenerla visible mientras navegas</p>
+                        <p class="video-section__placeholder-hint">20 diapositivas · 20 segundos cada una · 6 min 40 s</p>
                     </div>
-                </button>
+                </div>
 
                 <div class="video-section__meta">
                     <div class="video-section__meta-item">
@@ -1144,41 +1149,6 @@
             </div>
         </div>
     </section>
-
-    <!-- ========== FLOATING VIDEO PLAYER (MODAL ARRASTRABLE) ========== -->
-    <div id="floatingVideo" class="floating-video" role="dialog" aria-modal="false" aria-labelledby="floatingVideoTitle" hidden>
-        <div class="floating-video__header" id="floatingVideoHeader">
-            <span class="floating-video__dot"></span>
-            <span class="floating-video__dot floating-video__dot--alt"></span>
-            <h3 id="floatingVideoTitle" class="floating-video__title">Pechakucha — Filoxenia</h3>
-            <div class="floating-video__controls">
-                <button class="floating-video__btn" id="floatingVideoMin" aria-label="Minimizar / Restaurar" title="Minimizar">—</button>
-                <button class="floating-video__btn" id="floatingVideoMax" aria-label="Maximizar" title="Maximizar">⛶</button>
-                <button class="floating-video__btn floating-video__btn--close" id="floatingVideoClose" aria-label="Cerrar" title="Cerrar">&times;</button>
-            </div>
-        </div>
-        <div class="floating-video__body">
-            <video
-                id="floatingVideoEl"
-                class="floating-video__media"
-                controls
-                preload="metadata"
-                playsinline>
-                <source id="floatingVideoSource" src="" type="video/mp4">
-                Tu navegador no soporta la reproducción de video HTML5.
-            </video>
-            <iframe
-                id="floatingVideoIframe"
-                class="floating-video__media floating-video__media--iframe"
-                src=""
-                title="Reproductor de video flotante"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-                hidden></iframe>
-        </div>
-        <div class="floating-video__resize" id="floatingVideoResize" aria-hidden="true"></div>
-    </div>
 
     <!-- ========== EQUIPO ========== -->
     <section id="equipo" class="section equipo">
@@ -1329,6 +1299,6 @@
         </svg>
     </button>
 
-    <script src="script.js?v=2026-05-12"></script>
+    <script src="script.js?v=2026-05-12b"></script>
 </body>
 </html>
