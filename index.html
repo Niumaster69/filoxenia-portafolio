@@ -7,7 +7,7 @@
     <meta name="keywords" content="Filoxenia, IA, inteligencia artificial, meta-humano, comportamiento social, Universidad de Cundinamarca">
     <meta name="author" content="Cristhian Aza, Duvan Lozano, Henry Ortega">
     <title>Filoxenia | IA Conversacional Meta-Humana</title>
-    <link rel="stylesheet" href="styles.css?v=2026-05-09b">
+    <link rel="stylesheet" href="styles.css?v=2026-05-12">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,6 +86,7 @@
                 </li>
                 <li><a href="#timeline" class="navbar__link">Hitos</a></li>
                 <li><a href="#galeria" class="navbar__link">Galería</a></li>
+                <li><a href="#video" class="navbar__link">Pechakucha</a></li>
                 <li><a href="#equipo" class="navbar__link">Equipo</a></li>
                 <li><a href="#info" class="navbar__link">Info</a></li>
             </ul>
@@ -1084,11 +1085,106 @@
         </div>
     </section>
 
+    <!-- ========== PECHAKUCHA ========== -->
+    <section id="video" class="section video-section">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__tag">09 — Pechakucha</span>
+                <h2 class="section__title">Pechakucha del Proyecto</h2>
+                <p class="section__subtitle">Presentación Pechakucha de Filoxenia: 20 diapositivas, 20 segundos cada una, contando la problemática, la metodología y los avances del prototipo.</p>
+            </div>
+
+            <div class="video-section__wrapper" data-aos="fade-up">
+                <button
+                    id="videoLauncher"
+                    class="video-section__placeholder"
+                    type="button"
+                    data-video-embed="https://www.youtube.com/embed/pKNAGj9yizA?autoplay=1&rel=0"
+                    data-video-title="Pechakucha — Filoxenia"
+                    aria-label="Abrir pechakucha en ventana flotante">
+                    <div class="video-section__placeholder-bg" style="background-image: url('assets/marco-logico/portada.jpeg');"></div>
+                    <div class="video-section__placeholder-overlay"></div>
+                    <div class="video-section__placeholder-content">
+                        <div class="video-section__play-button" aria-hidden="true">
+                            <svg viewBox="0 0 80 80" width="80" height="80">
+                                <circle cx="40" cy="40" r="38" fill="none" stroke="url(#playGrad)" stroke-width="2"/>
+                                <polygon points="32,25 32,55 58,40" fill="url(#playGrad)"/>
+                                <defs>
+                                    <linearGradient id="playGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#00d4ff"/>
+                                        <stop offset="100%" stop-color="#7b2ff7"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <span class="video-section__placeholder-label">Reproducir Pechakucha</span>
+                        <p class="video-section__placeholder-hint">Se abrirá una ventana flotante con el video desde YouTube — podrás moverla y mantenerla visible mientras navegas</p>
+                    </div>
+                </button>
+
+                <div class="video-section__meta">
+                    <div class="video-section__meta-item">
+                        <span class="video-section__meta-label">Proyecto</span>
+                        <span class="video-section__meta-value">Filoxenia · IA Conversacional Meta-Humana</span>
+                    </div>
+                    <div class="video-section__meta-item">
+                        <span class="video-section__meta-label">Institución</span>
+                        <span class="video-section__meta-value">Universidad de Cundinamarca · Chía</span>
+                    </div>
+                    <div class="video-section__meta-item">
+                        <span class="video-section__meta-label">Equipo</span>
+                        <span class="video-section__meta-value">Cristhian Aza · Duvan Lozano · Henry Ortega</span>
+                    </div>
+                </div>
+
+                <div class="video-section__actions">
+                    <a href="https://youtu.be/pKNAGj9yizA" target="_blank" rel="noopener" class="btn btn--primary">Ver en YouTube</a>
+                    <a href="#rae" class="btn btn--outline">Ver documentos del proyecto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FLOATING VIDEO PLAYER (MODAL ARRASTRABLE) ========== -->
+    <div id="floatingVideo" class="floating-video" role="dialog" aria-modal="false" aria-labelledby="floatingVideoTitle" hidden>
+        <div class="floating-video__header" id="floatingVideoHeader">
+            <span class="floating-video__dot"></span>
+            <span class="floating-video__dot floating-video__dot--alt"></span>
+            <h3 id="floatingVideoTitle" class="floating-video__title">Pechakucha — Filoxenia</h3>
+            <div class="floating-video__controls">
+                <button class="floating-video__btn" id="floatingVideoMin" aria-label="Minimizar / Restaurar" title="Minimizar">—</button>
+                <button class="floating-video__btn" id="floatingVideoMax" aria-label="Maximizar" title="Maximizar">⛶</button>
+                <button class="floating-video__btn floating-video__btn--close" id="floatingVideoClose" aria-label="Cerrar" title="Cerrar">&times;</button>
+            </div>
+        </div>
+        <div class="floating-video__body">
+            <video
+                id="floatingVideoEl"
+                class="floating-video__media"
+                controls
+                preload="metadata"
+                playsinline>
+                <source id="floatingVideoSource" src="" type="video/mp4">
+                Tu navegador no soporta la reproducción de video HTML5.
+            </video>
+            <iframe
+                id="floatingVideoIframe"
+                class="floating-video__media floating-video__media--iframe"
+                src=""
+                title="Reproductor de video flotante"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                hidden></iframe>
+        </div>
+        <div class="floating-video__resize" id="floatingVideoResize" aria-hidden="true"></div>
+    </div>
+
     <!-- ========== EQUIPO ========== -->
     <section id="equipo" class="section equipo">
         <div class="container">
             <div class="section__header" data-aos="fade-up">
-                <span class="section__tag">09 — Equipo</span>
+                <span class="section__tag">10 — Equipo</span>
                 <h2 class="section__title">Nuestro Equipo</h2>
                 <p class="section__subtitle">Los investigadores y desarrolladores detrás de Filoxenia</p>
             </div>
@@ -1128,7 +1224,7 @@
     <section id="info" class="section contacto">
         <div class="container">
             <div class="section__header" data-aos="fade-up">
-                <span class="section__tag">10 — Información</span>
+                <span class="section__tag">11 — Información</span>
                 <h2 class="section__title">Información Institucional</h2>
                 <p class="section__subtitle">Datos académicos del proyecto de investigación</p>
             </div>
@@ -1213,6 +1309,7 @@
                     <a href="#sobre">Sobre Filoxenia</a>
                     <a href="#timeline">Hitos / Cronograma</a>
                     <a href="#galeria">Galería</a>
+                    <a href="#video">Pechakucha</a>
                     <a href="#equipo">Equipo</a>
                     <a href="#info">Información</a>
                 </div>
@@ -1232,6 +1329,6 @@
         </svg>
     </button>
 
-    <script src="script.js?v=2026-05-09b"></script>
+    <script src="script.js?v=2026-05-12"></script>
 </body>
 </html>

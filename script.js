@@ -525,4 +525,158 @@
         });
     });
 
+    /* ===== Floating Video Player (Ventana Flotante) ===== */
+    const videoLauncher = document.getElementById('videoLauncher');
+    const floatingVideo = document.getElementById('floatingVideo');
+    const floatingVideoEl = document.getElementById('floatingVideoEl');
+    const floatingVideoSource = document.getElementById('floatingVideoSource');
+    const floatingVideoIframe = document.getElementById('floatingVideoIframe');
+    const floatingVideoTitle = document.getElementById('floatingVideoTitle');
+    const floatingVideoHeader = document.getElementById('floatingVideoHeader');
+    const floatingVideoClose = document.getElementById('floatingVideoClose');
+    const floatingVideoMin = document.getElementById('floatingVideoMin');
+    const floatingVideoMax = document.getElementById('floatingVideoMax');
+    const floatingVideoResize = document.getElementById('floatingVideoResize');
+
+    function openFloatingVideo(src, title, isEmbed) {
+        if (!floatingVideo) return;
+        floatingVideoTitle.textContent = title || 'Video';
+        if (isEmbed) {
+            floatingVideoEl.hidden = true;
+            floatingVideoEl.pause();
+            floatingVideoIframe.hidden = false;
+            floatingVideoIframe.src = src;
+        } else {
+            floatingVideoIframe.hidden = true;
+            floatingVideoIframe.src = '';
+            floatingVideoEl.hidden = false;
+            floatingVideoSource.src = src;
+            floatingVideoEl.load();
+            const playPromise = floatingVideoEl.play();
+            if (playPromise && typeof playPromise.catch === 'function') {
+                playPromise.catch(() => { /* autoplay bloqueado, usuario debe pulsar play */ });
+            }
+        }
+        floatingVideo.hidden = false;
+        floatingVideo.classList.remove('floating-video--minimized', 'floating-video--maximized');
+    }
+
+    function closeFloatingVideo() {
+        if (!floatingVideo) return;
+        floatingVideo.hidden = true;
+        if (floatingVideoEl) {
+            floatingVideoEl.pause();
+            floatingVideoEl.currentTime = 0;
+        }
+        if (floatingVideoIframe) {
+            floatingVideoIframe.src = '';
+        }
+    }
+
+    if (videoLauncher) {
+        videoLauncher.addEventListener('click', () => {
+            const src = videoLauncher.dataset.videoSrc;
+            const embed = videoLauncher.dataset.videoEmbed;
+            const title = videoLauncher.dataset.videoTitle || 'Video';
+            if (embed) {
+                openFloatingVideo(embed, title, true);
+            } else if (src) {
+                openFloatingVideo(src, title, false);
+            }
+        });
+    }
+
+    if (floatingVideoClose) floatingVideoClose.addEventListener('click', closeFloatingVideo);
+
+    if (floatingVideoMin) {
+        floatingVideoMin.addEventListener('click', () => {
+            floatingVideo.classList.toggle('floating-video--minimized');
+            floatingVideo.classList.remove('floating-video--maximized');
+        });
+    }
+    if (floatingVideoMax) {
+        floatingVideoMax.addEventListener('click', () => {
+            floatingVideo.classList.toggle('floating-video--maximized');
+            floatingVideo.classList.remove('floating-video--minimized');
+        });
+    }
+
+    /* Drag (arrastrar la ventana flotante) */
+    if (floatingVideoHeader && floatingVideo) {
+        let dragging = false;
+        let startX = 0, startY = 0, startLeft = 0, startTop = 0;
+
+        floatingVideoHeader.addEventListener('mousedown', (e) => {
+            if (e.target.closest('.floating-video__btn')) return;
+            if (floatingVideo.classList.contains('floating-video--maximized')) return;
+            dragging = true;
+            const rect = floatingVideo.getBoundingClientRect();
+            startX = e.clientX;
+            startY = e.clientY;
+            startLeft = rect.left;
+            startTop = rect.top;
+            floatingVideo.style.left = startLeft + 'px';
+            floatingVideo.style.top = startTop + 'px';
+            floatingVideo.style.right = 'auto';
+            document.body.style.userSelect = 'none';
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!dragging) return;
+            const dx = e.clientX - startX;
+            const dy = e.clientY - startY;
+            const newLeft = Math.max(8, Math.min(window.innerWidth - 100, startLeft + dx));
+            const newTop = Math.max(8, Math.min(window.innerHeight - 60, startTop + dy));
+            floatingVideo.style.left = newLeft + 'px';
+            floatingVideo.style.top = newTop + 'px';
+        });
+
+        document.addEventListener('mouseup', () => {
+            if (dragging) {
+                dragging = false;
+                document.body.style.userSelect = '';
+            }
+        });
+    }
+
+    /* Resize (esquina inferior derecha) */
+    if (floatingVideoResize && floatingVideo) {
+        let resizing = false;
+        let startX = 0, startY = 0, startW = 0, startH = 0;
+
+        floatingVideoResize.addEventListener('mousedown', (e) => {
+            if (floatingVideo.classList.contains('floating-video--maximized')) return;
+            resizing = true;
+            const rect = floatingVideo.getBoundingClientRect();
+            startX = e.clientX;
+            startY = e.clientY;
+            startW = rect.width;
+            startH = rect.height;
+            document.body.style.userSelect = 'none';
+            e.preventDefault();
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!resizing) return;
+            const newW = Math.max(320, startW + (e.clientX - startX));
+            const newH = Math.max(220, startH + (e.clientY - startY));
+            floatingVideo.style.width = newW + 'px';
+            floatingVideo.style.height = newH + 'px';
+        });
+
+        document.addEventListener('mouseup', () => {
+            if (resizing) {
+                resizing = false;
+                document.body.style.userSelect = '';
+            }
+        });
+    }
+
+    /* Cerrar con tecla Escape */
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && floatingVideo && !floatingVideo.hidden) {
+            closeFloatingVideo();
+        }
+    });
+
 })();
